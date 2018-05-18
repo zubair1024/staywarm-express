@@ -17,48 +17,45 @@ $(document).ready(function () {
         },
         optionSelected: function (questionNumber, questionAnswer, questionLabel, item) {
             //hide all after
-            for (let i = (questionNumber + 1); i <= this.questions.length; i++) {
-                if (this.questions[i] && !this.questions[i].hasClass('hidden-item')) {
-                    this.questions[i].addClass('hidden-item')
+            for (let i = questionNumber; i <= this.questions.length; i++) {
+                if (i != questionNumber) {
+                    if (this.questions[i] && !this.questions[i].hasClass('hidden-item')) {
+                        this.questions[i].addClass('hidden-item')
+                    }
                 }
-            }
-            let options = $(item).parent().children();
-            for (let i = 0; i < options.length; i++) {
-                let image = $(options[i]).find('img');
-                if (image.hasClass('active')) {
-                    image.removeClass('active')
+                let options = $(this.questions[i]).children();
+                for (let i = 0; i < options.length; i++) {
+                    let image = $(options[i]).find('img');
+                    if (image.hasClass('active')) {
+                        image.removeClass('active')
+                    }
                 }
             }
             $(item).find('img').addClass('active');
             switch (questionNumber) {
                 case 0:
-                    switch (questionAnswer) {
-                        case 'gas':
-
-                            this.questions[1].removeClass('hidden-item');
-                            break;
-                        case 'electric':
-                            break;
-                        case 'lpg':
-                            break;
-                        case 'oil':
-                            break;
+                    if (questionAnswer == 'gas') {
+                        this.questions[1].removeClass('hidden-item');
                     }
                     break;
                 case 1:
+                    if (questionAnswer == 'yes') {
+                        this.questions[2].removeClass('hidden-item');
+                    } else {
+                        this.questions[3].removeClass('hidden-item');
+                    }
                     break;
                 case 2:
+                    this.questions[3].removeClass('hidden-item');
                     break;
                 case 3:
-
+                    this.questions[4].removeClass('hidden-item');
                     break;
                 case 4:
-
                     break;
                 default:
                     //no nothing
                     break;
-                    this.questions[questionNumber]
                     this.model[questionLabel] = questionAnswer;
             }
         }
