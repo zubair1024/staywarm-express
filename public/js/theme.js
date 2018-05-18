@@ -12,7 +12,7 @@
     if ($(".smoothscroll > li > a, .btn-getnow").length > 0) {
         $(".smoothscroll > li > a, .btn-getnow").on("click", function (e) {
             e.preventDefault();
-            $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top + "px"}, 1600, "swing");
+            $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -80 + "px"}, 1600, "swing");
         });
     }
     // Screenshot Carousel
