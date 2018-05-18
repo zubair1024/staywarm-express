@@ -2793,7 +2793,7 @@ Contact
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 32em;
+  width: 25em;
   }
 }
 
@@ -3905,7 +3905,7 @@ Styles for smaller devices
   }
 
   .sec-faq .row .wrapper-img img {
-    width: 600px;
+    width: 347px;
     top: -30px;
     right: -200px;
   }
@@ -3969,10 +3969,10 @@ Styles for smaller devices
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    background-color: #4776e6;
-    background-image: -moz-linear-gradient(0deg, #4776e6 0%, #8E54E9 100%);
-    background-image: -webkit-linear-gradient(0deg, #4776e6 0%, #8E54E9 100%);
-    background-image: -ms-linear-gradient(0deg, #4776e6 0%, #8E54E9 100%);
+    background-color: #c5281d;
+    background-image: -moz-linear-gradient(0deg, #a94442 0%, #a94442 100%);
+    background-image: -webkit-linear-gradient(0deg, #a94442 0%, #a94442 100%);
+    background-image: -ms-linear-gradient(0deg, #a94442 0%, #a94442 100%);
   }
 
   header {
