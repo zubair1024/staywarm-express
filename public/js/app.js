@@ -52,6 +52,8 @@ $(document).ready(function () {
                     this.questions[4].removeClass('hidden-item');
                     break;
                 case 4:
+                debugger;
+                    this.questions[5].removeClass('hidden-item');
                     break;
                 default:
                     //no nothing
