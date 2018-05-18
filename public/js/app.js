@@ -97,6 +97,13 @@ $(document).ready(function () {
                         this.questions[i].addClass('hidden-item')
                     }
                 }
+                swal({
+                    position: 'top-end',
+                    type: 'success',
+                    title: 'Your query has been sent. We will get back to you shortly.',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 if ($('#thankyou').hasClass('hidden-item')) {
                     $('#thankyou').removeClass('hidden-item');
                 }
@@ -111,8 +118,8 @@ $(document).ready(function () {
             }
         },
         optionSelected: function (questionNumber, questionAnswer, questionLabel, item) {
-             //scroll to questions
-             $("html, body").animate({ scrollTop: $($(item)).offset().top - 200 + "px" }, 1600, "swing");
+            //scroll to questions
+            $("html, body").animate({ scrollTop: $($(item)).offset().top - 200 + "px" }, 1600, "swing");
             //hide all after
             for (let i = questionNumber; i <= this.questions.length; i++) {
                 if (i != questionNumber) {
@@ -131,8 +138,34 @@ $(document).ready(function () {
             $(item).find('img').addClass('active');
             switch (questionNumber) {
                 case 0:
-                    if (questionAnswer == 'gas') {
-                        this.questions[1].removeClass('hidden-item');
+                    switch (questionAnswer) {
+                        case 'gas':
+                            this.questions[1].removeClass('hidden-item');
+                            break;
+                        case 'electric':
+                            swal({
+                                type: 'error',
+                                title: 'Oops...',
+                                text: 'At this point in time we do not provide heating solution for Electric fuel.',
+                                footer: '',
+                            })
+                            break;
+                        case 'lpg':
+                            swal({
+                                type: 'error',
+                                title: 'Oops...',
+                                text: 'At this point in time we do not provide heating solution for LPG.',
+                                footer: '',
+                            })
+                            break;
+                        case 'oil':
+                            swal({
+                                type: 'error',
+                                title: 'Oops...',
+                                text: 'At this point in time we do not provide heating solution for Oil.',
+                                footer: '',
+                            })
+                            break;
                     }
                     break;
                 case 1:
