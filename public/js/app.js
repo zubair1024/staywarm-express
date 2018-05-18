@@ -61,7 +61,58 @@ $(document).ready(function () {
             }
 
         },
+        mainQuote() {
+            let firstName = $('#main_firstName').val();
+            let surName = $('#main_surName').val();
+            let contactNumber = $('#main_contactNumber').val();
+            let email = $('#main_email').val();
+            let valid = true;
+            let invalid = [];
+            //hide all error messages
+            for (let i = 0; i < 3; i++) {
+                if (!$(`#main-error-${i}`).hasClass('hidden-item')) {
+                    $(`#main-error-${i}`).addClass('hidden-item');
+                }
+            }
+            if (firstName == '') {
+                invalid.push(0);
+            }
+            if (surName == '') {
+                invalid.push(1);
+            }
+            if (contactNumber === '') {
+                invalid.push(2);
+            }
+            if (email === '' || (!(email.indexOf('@') > -1))) {
+                invalid.push(3);
+            }
+            if (invalid.length === 0) {
+                this.model.firstName = firstName;
+                this.model.surName = surName;
+                this.model.contactNumber = contactNumber;
+                this.model.email = email;
+                //hide
+                for (let i = 0; i <= this.questions.length; i++) {
+                    if (this.questions[i] && !this.questions[i].hasClass('hidden-item')) {
+                        this.questions[i].addClass('hidden-item')
+                    }
+                }
+                if ($('#thankyou').hasClass('hidden-item')) {
+                    $('#thankyou').removeClass('hidden-item');
+                }
+                //scroll to questions
+                $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 1600, "swing");
+            } else {
+                invalid.forEach(function (i) {
+                    if ($(`#main-error-${i}`).hasClass('hidden-item')) {
+                        $(`#main-error-${i}`).removeClass('hidden-item')
+                    }
+                });
+            }
+        },
         optionSelected: function (questionNumber, questionAnswer, questionLabel, item) {
+             //scroll to questions
+             $("html, body").animate({ scrollTop: $($(item)).offset().top - 200 + "px" }, 1600, "swing");
             //hide all after
             for (let i = questionNumber; i <= this.questions.length; i++) {
                 if (i != questionNumber) {

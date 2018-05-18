@@ -4623,3 +4623,8 @@ Styles for smaller devices
   font-size: 12px;
 }
 
+.main-error{
+  font-size: 12px;
+  color:red;
+}
+

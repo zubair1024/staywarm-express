@@ -388,11 +388,13 @@
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
                                 <input id="main_firstName" name="main_firstName" type="text" class="form-control main_firstName" placeholder="First Name">
+                                <span id="main-error-0" class="main-error hidden-item">Please enter a valid first name</span>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
                                 <input id="main_surName" name="main_surName" type="text" class="form-control main_surName" placeholder="Surname">
+                                <span id="main-error-1" class="main-error hidden-item">Please enter a valid surname</span>
                             </div>
                         </div>
                     </div>
@@ -400,18 +402,20 @@
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
                                 <input id="main_contactNumber" name="main_contactNumber" type="number" class="form-control main_contactNumber" placeholder="Contact Number">
+                                <span id="main-error-2" class="main-error hidden-item">Please enter a valid contact number</span>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                <input  id="main_email" name="main_email" type="email" class="form-control main_email" placeholder="Email Address">
+                                <input id="main_email" name="main_email" type="email" class="form-control main_email" placeholder="Email Address">
+                                <span id="main-error-3" class="main-error hidden-item">Please enter a valid email</span>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                <a class="btn btn-danger">Submit Quote To Get A Price</a>
+                                <a class="btn btn-danger" onclick="App.mainQuote()">Submit Quote To Get A Price</a>
                             </div>
                         </div>
                     </div>
@@ -419,6 +423,24 @@
             </div>
         </div>
         <!-- Question 5 End-->
+        <div id="thankyou" class="hidden-item">
+            <div class="jumbotron text-xs-center">
+                <h1 class="display-3">Thank You!</h1>
+                <p class="lead">
+                    Our engineer will visit you on your chosen day and you will soon have a brand new boiler covered and guaranteed for 7 years!</p>
+                <strong>We will contact you shortly to book a survey date.</strong>
+                </p>
+                <hr> {{!--
+                <p>
+                    Having trouble?
+                    <a href="">Contact us</a>
+                </p> --}}
+                <p class="lead">
+                    {{!--
+                    <a class="btn btn-primary btn-sm" href="https://bootstrapcreative.com/" role="button">Continue to homepage</a> --}}
+                </p>
+            </div>
+        </div>
     </div>
 </section>
 <!-- QUESTIONS END -->
