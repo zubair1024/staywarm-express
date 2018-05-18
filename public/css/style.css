@@ -2120,6 +2120,10 @@ FAQ
   max-width: 600px;
   box-shadow: 1px 0px 60px -10px #000;
   border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 .sec-faq .row .faq-inner .panel-group {
