@@ -238,7 +238,7 @@ nav.bg-solid {
 }
 
 nav.bg-solid .navbar-header .navbar-toggle .icon-bar {
-  background-color: #725ce6;
+  background-color: #ff4b41;
 }
 
 nav.bg-solid .navbar-header .navbar-brand img.logo-blue {
@@ -2117,7 +2117,7 @@ FAQ
   /* position: absolute; */
   /* top: -231px; */
   max-width: 600px;
-  box-shadow: 0px 0px 16px #000;
+  box-shadow: 1px 0px 60px -10px #000;
   border-radius: 10px;
 }
 
@@ -3741,7 +3741,7 @@ Styles for smaller devices
   }
 
   .sec-faq .row .wrapper-img img {
-    width: 800px;
+    width: 440px;
     top: -115px;
     right: -278px;
   }
