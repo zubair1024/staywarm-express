@@ -119,7 +119,7 @@ $(document).ready(function () {
         },
         optionSelected: function (questionNumber, questionAnswer, questionLabel, item) {
             //scroll to questions
-            $("html, body").animate({ scrollTop: $($(item)).offset().top - 200 + "px" }, 1600, "swing");
+            $("html, body").animate({ scrollTop: $($(item)).offset().top - 200 + "px" }, 700, "swing");
             //hide all after
             for (let i = questionNumber; i <= this.questions.length; i++) {
                 if (i != questionNumber) {
