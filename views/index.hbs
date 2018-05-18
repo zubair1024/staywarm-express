@@ -56,21 +56,25 @@
                         <span>7 Year StayWarm</span> promise</h1>
                 </div>
                 <div class="col-sm-5 col-header-txt col-header-quote">
-                    <form class="quote_form" action="#" method="post" enctype="multipart/form-data">
+                    <form class="quote_form">
                         <!-- <h3>Interested?</h3> -->
                         <div class="form-group">
-                            <input name="uname" type="text" class="form-control uName" placeholder="Name">
+                            <input id="banner_firstName" name="banner_firstName" type="text" class="form-control uName" placeholder="Name">
+                            <span id="banner-error-0" class="banner-error hidden-item">Please enter a valid first name</span>
                         </div>
                         <div class="form-group">
-                            <input name="sname" type="text" class="form-control sName" placeholder="Surname">
+                            <input id="banner_surName" name="banner_surName" type="text" class="form-control sName" placeholder="Surname">
+                            <span id="banner-error-1" class="banner-error hidden-item">Please enter a valid surname</span>
                         </div>
                         <div class="form-group">
-                            <input name="uphone" type="number" class="form-control uphone" placeholder="Contact Number">
+                            <input id="banner_contactNumber" name="banner_contactNumber" type="number" class="form-control uphone" placeholder="Contact Number">
+                            <span id="banner-error-2" class="banner-error hidden-item">Please enter a valid contact number</span>
                         </div>
                         <div class="form-group">
-                            <input name="uemail" type="email" class="form-control uEmail" placeholder="Email Address">
+                            <input id="banner_email" name="banner_email" type="email" class="form-control uEmail" placeholder="Email Address">
+                            <span id="banner-error-3" class="banner-error hidden-item">Please enter a valid email address</span>
                         </div>
-                        <a type="submit" class="btn-white">Get a Quote
+                        <a onclick="App.bannerQuote()" id="banner-btn" class="btn-white">Get a Quote
                         </a>
                         <!-- <p id="fftext"></p>
                             <span id="ffsuccess"></span> -->
@@ -383,24 +387,24 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                <input name="uname" type="text" class="form-control uName" placeholder="Name">
+                                <input id="main_firstName" name="main_firstName" type="text" class="form-control main_firstName" placeholder="First Name">
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                <input name="sname" type="text" class="form-control sName" placeholder="Surname">
+                                <input id="main_surName" name="main_surName" type="text" class="form-control main_surName" placeholder="Surname">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                <input name="uphone" type="number" class="form-control uphone" placeholder="Contact Number">
+                                <input id="main_contactNumber" name="main_contactNumber" type="number" class="form-control main_contactNumber" placeholder="Contact Number">
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="form-group">
-                                <input name="uemail" type="email" class="form-control uEmail" placeholder="Email Address">
+                                <input  id="main_email" name="main_email" type="email" class="form-control main_email" placeholder="Email Address">
                             </div>
                         </div>
                     </div>

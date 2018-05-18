@@ -1101,6 +1101,7 @@ header.image-home:before{
   background-color: white;
   border-color: white;
   display: block;
+  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
 }
@@ -4612,5 +4613,13 @@ Styles for smaller devices
 
 .hidden-item{
   display: none;
+}
+
+.unhide-item{
+  display: block;
+}
+
+.banner-error{
+  font-size: 12px;
 }
 

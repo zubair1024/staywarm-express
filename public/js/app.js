@@ -15,6 +15,52 @@ $(document).ready(function () {
                 }
             }
         },
+        bannerQuote: function () {
+            let firstName = $('#banner_firstName').val();
+            let surName = $('#banner_surName').val();
+            let contactNumber = $('#banner_contactNumber').val();
+            let email = $('#banner_email').val();
+            let valid = true;
+            let invalid = [];
+            //hide all error messages
+            for (let i = 0; i < 3; i++) {
+                if (!$(`#banner-error-${i}`).hasClass('hidden-item')) {
+                    $(`#banner-error-${i}`).addClass('hidden-item');
+                }
+            }
+            if (firstName == '') {
+                invalid.push(0);
+            }
+            if (surName == '') {
+                invalid.push(1);
+            }
+            if (contactNumber === '') {
+                invalid.push(2);
+            }
+            if (email === '' || (!(email.indexOf('@') > -1))) {
+                invalid.push(3);
+            }
+            if (invalid.length === 0) {
+                this.model.firstName = firstName;
+                this.model.surName = surName;
+                this.model.contactNumber = contactNumber;
+                this.model.email = email;
+                $('#banner_firstName').prop('disabled', true);
+                $('#banner_surName').prop('disabled', true);
+                $('#banner_contactNumber').prop('disabled', true);
+                $('#banner_email').prop('disabled', true);
+                $('#banner-btn').addClass('disabled');
+                //scroll to questions
+                $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 1600, "swing");
+            } else {
+                invalid.forEach(function (i) {
+                    if ($(`#banner-error-${i}`).hasClass('hidden-item')) {
+                        $(`#banner-error-${i}`).removeClass('hidden-item')
+                    }
+                });
+            }
+
+        },
         optionSelected: function (questionNumber, questionAnswer, questionLabel, item) {
             //hide all after
             for (let i = questionNumber; i <= this.questions.length; i++) {
@@ -52,8 +98,18 @@ $(document).ready(function () {
                     this.questions[4].removeClass('hidden-item');
                     break;
                 case 4:
-                debugger;
                     this.questions[5].removeClass('hidden-item');
+                    if (
+                        this.model.firstName &&
+                        this.model.surName &&
+                        this.model.contactNumber &&
+                        this.model.email
+                    ) {
+                        $('#main_firstName').val(this.model.firstName);
+                        $('#main_surName').val(this.model.surName);
+                        $('#main_contactNumber').val(this.model.contactNumber);
+                        $('#main_email').val(this.model.email);
+                    }
                     break;
                 default:
                     //no nothing
