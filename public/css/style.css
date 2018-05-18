@@ -4503,6 +4503,14 @@ Styles for smaller devices
   text-align: left;
 }
 
+.ans-wrapper a img:hover{
+  box-shadow: 0px 0px 21px -5px #000;
+}
+
+.ans-wrapper a img.active{
+  box-shadow: 0px 0px 21px -5px red;
+}
+
 .question-text{
   font-weight: bold;
 }
@@ -4592,4 +4600,8 @@ Styles for smaller devices
   content: '\f0e7';
   font-family: FontAwesome;
   color: yellow;
+}
+
+.hidden-item{
+  display: none;
 }
