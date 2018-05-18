@@ -51,7 +51,7 @@ $(document).ready(function () {
                 $('#banner_email').prop('disabled', true);
                 $('#banner-btn').addClass('disabled');
                 //scroll to questions
-                $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 1600, "swing");
+                $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 700, "swing");
             } else {
                 invalid.forEach(function (i) {
                     if ($(`#banner-error-${i}`).hasClass('hidden-item')) {
