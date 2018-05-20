@@ -21,10 +21,10 @@ $(document).ready(function () {
             }
         },
         bannerQuote: function (size) {
-            let firstName = $('#banner_firstName').val();
-            let surName = $('#banner_surName').val();
-            let contactNumber = $('#banner_contactNumber').val();
-            let email = $('#banner_email').val();
+            let firstName = $(`#banner_${size}_firstName`).val();
+            let surName = $(`#banner_${size}_surName`).val();
+            let contactNumber = $(`#banner_${size}_contactNumber`).val();
+            let email = $(`#banner_${size}_email`).val();
             let valid = true;
             let invalid = [];
             //hide all error messages
@@ -50,11 +50,11 @@ $(document).ready(function () {
                 this.model.surName = surName;
                 this.model.contactNumber = contactNumber;
                 this.model.email = email;
-                $('#banner_firstName').prop('disabled', true);
-                $('#banner_surName').prop('disabled', true);
-                $('#banner_contactNumber').prop('disabled', true);
-                $('#banner_email').prop('disabled', true);
-                $('#banner-btn').addClass('disabled');
+                $(`#banner_${size}_firstName`).prop('disabled', true);
+                $(`#banner_${size}_surName`).prop('disabled', true);
+                $(`#banner_${size}_contactNumber`).prop('disabled', true);
+                $(`#banner_${size}_email`).prop('disabled', true);
+                $(`#banner-btn-${size}`).addClass('disabled');
                 //scroll to questions
                 $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 700, "swing");
             } else {
