@@ -15,27 +15,27 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right smoothscroll">
-                    <li class="active">
-                        <a href="#home">Home</a>
+                    <li>
+                        <a href="#home" onclick="App.menuItemClicked()">Home</a>
                     </li>
                     <li>
-                        <a href="#howitworks">How It Works</a>
+                        <a href="#howitworks" onclick="App.menuItemClicked()">How It Works</a>
                     </li>
                     <!-- <li>
                             <a href="#screenshots">Case Study</a>
                         </li> -->
 
                     <li>
-                        <a href="#testimonial">Testimonials</a>
+                        <a href="#testimonial" onclick="App.menuItemClicked()">Testimonials</a>
                     </li>
                     <li>
-                        <a href="#faq">About Us</a>
+                        <a href="#faq" onclick="App.menuItemClicked()">About Us</a>
                     </li>
                     <!-- <li><a href="#team">Team</a></li> -->
                     <!-- <li><a href="#pricing">Pricing</a></li> -->
                     <!-- <li><a href="#blog">Blog</a></li> -->
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact" onclick="App.menuItemClicked()">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -164,99 +164,6 @@
     </div>
 </section>
 <!-- END VIDEO -->
-<!-- FEATURES -->
-<section id="features" class="sec-features bg-grey">
-    <h2 class="sec-title">Our Amazing Offer</h2>
-    <div class="hr"></div>
-    <p class="subheader">As an added bonus we will provide our
-        <b>Home Emergency Deluxe Plan</b>, this will include:</p>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 col-md-12 container-acting">
-                <div class="row">
-                    <div class="col-sm-6 col-md-4 col-lg-3 feat-top-left animate delay-a">
-                        <span class="lnr lnr-drop"></span>
-                        <h5>External Plumbing &amp; Drainage</h5>
-                        <!-- <p>Integer quis mollis lacus maecenas in
-                                <br>ornare ex sed scelerisque nec elit nec
-                                <br>vehicula duis pretium libero</p> -->
-                        <p>We are able to tackle your drainage emergency quickly, cleanly and safely, 24 hours a day, 7 days
-                            a week.</p>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3 feat-top-right animate">
-                        <span class="lnr lnr-unlink"></span>
-                        <h5>Electrical Emergency &amp; Breakdown</h5>
-                        <!-- <p>Duis finibus odio sit amet nisi dictum et
-                                <br>viverra libero semper donec consectetur
-                                <br>ultrices ante ac vehicula.</p> -->
-                        <p>We work with the largest managed breakdown recovery network in the UK.</p>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3 feat-bottom-left animate delay-a">
-                        <span class="lnr lnr-lock"></span>
-                        <h5>Home Security</h5>
-                        <!-- <p>Cras eget consequat justo pellentesque
-                                <br>sodales metus metus lacinia dolor
-                                <br>aliquam id donec vitae sapien</p> -->
-                        <p>We will assist you and pay for the call out, labour, parts and materials involved in emergencies
-                            relating to the security of your home, including lost keys to your home.</p>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3 feat-bottom-right animate">
-                        <span class="lnr lnr-bug"></span>
-                        <h5>Pest Control</h5>
-                        <p>We provide pest control services from the experts to solve your pest problems across the UK.</p>
-                    </div>
-                </div>
-                <img class='img-responsive' src="img/features/phone-lines.png" alt='featured'>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END FEATURES -->
-<!-- STEPS -->
-<section id="howitworks" class="sec-steps bg-gradient-vertical">
-    <h2 class="sec-title">How it works</h2>
-    <div class="hr"></div>
-    <p class="subheader">Buy a new boiler online today by 3pm and get it installed the next day!</p>
-    <div class="container">
-        <div class="row row-1">
-            <div class="col-sm-12 col-lg-10 col-lg-offset-1">
-                <div class="row row-2">
-                    <div class="col-sm-4 step-1">
-                        <div class="step-desc">
-                            <span>01</span>
-                            <h4>Place an order</h4>
-                            <hr>
-                            <p>Fill in the form on the website or drop your request to our website chat and get an instant customized
-                                quote
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 step-2">
-                        <div class="step-desc">
-                            <span>02</span>
-                            <h4>Book Site Survey</h4>
-                            <hr>
-                            <p>Our experienced engineers will carry out site survey to obtain information about your house heating
-                                system
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 step-3">
-                        <div class="step-desc">
-                            <span>03</span>
-                            <h4>Get Boiler Installed</h4>
-                            <hr>
-                            <p>Choose from leading boiler brands and have the installation carried out by trusted Gas-Safe registered
-                                engineers
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END STEPS -->
 <!-- QUESTIONS  -->
 <section id="questions" class="bg-white">
     <h2 class="sec-title">What Boiler do you need?</h2>
@@ -444,6 +351,99 @@
     </div>
 </section>
 <!-- QUESTIONS END -->
+<!-- STEPS -->
+<section id="howitworks" class="sec-steps bg-gradient-vertical">
+    <h2 class="sec-title">How it works</h2>
+    <div class="hr"></div>
+    <p class="subheader">Buy a new boiler online today by 3pm and get it installed the next day!</p>
+    <div class="container">
+        <div class="row row-1">
+            <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+                <div class="row row-2">
+                    <div class="col-sm-4 step-1">
+                        <div class="step-desc">
+                            <span>01</span>
+                            <h4>Place an order</h4>
+                            <hr>
+                            <p>Fill in the form on the website or drop your request to our website chat and get an instant customized
+                                quote
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 step-2">
+                        <div class="step-desc">
+                            <span>02</span>
+                            <h4>Book Site Survey</h4>
+                            <hr>
+                            <p>Our experienced engineers will carry out site survey to obtain information about your house heating
+                                system
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 step-3">
+                        <div class="step-desc">
+                            <span>03</span>
+                            <h4>Get Boiler Installed</h4>
+                            <hr>
+                            <p>Choose from leading boiler brands and have the installation carried out by trusted Gas-Safe registered
+                                engineers
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END STEPS -->
+<!-- FEATURES -->
+<section id="features" class="sec-features bg-grey">
+    <h2 class="sec-title">Our Amazing Offer</h2>
+    <div class="hr"></div>
+    <p class="subheader">As an added bonus we will provide our
+        <b>Home Emergency Deluxe Plan</b>, this will include:</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-12 container-acting">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-3 feat-top-left animate delay-a">
+                        <span class="lnr lnr-drop"></span>
+                        <h5>External Plumbing &amp; Drainage</h5>
+                        <!-- <p>Integer quis mollis lacus maecenas in
+                                <br>ornare ex sed scelerisque nec elit nec
+                                <br>vehicula duis pretium libero</p> -->
+                        <p>We are able to tackle your drainage emergency quickly, cleanly and safely, 24 hours a day, 7 days
+                            a week.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 feat-top-right animate">
+                        <span class="lnr lnr-unlink"></span>
+                        <h5>Electrical Emergency &amp; Breakdown</h5>
+                        <!-- <p>Duis finibus odio sit amet nisi dictum et
+                                <br>viverra libero semper donec consectetur
+                                <br>ultrices ante ac vehicula.</p> -->
+                        <p>We work with the largest managed breakdown recovery network in the UK.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 feat-bottom-left animate delay-a">
+                        <span class="lnr lnr-lock"></span>
+                        <h5>Home Security</h5>
+                        <!-- <p>Cras eget consequat justo pellentesque
+                                <br>sodales metus metus lacinia dolor
+                                <br>aliquam id donec vitae sapien</p> -->
+                        <p>We will assist you and pay for the call out, labour, parts and materials involved in emergencies
+                            relating to the security of your home, including lost keys to your home.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 feat-bottom-right animate">
+                        <span class="lnr lnr-bug"></span>
+                        <h5>Pest Control</h5>
+                        <p>We provide pest control services from the experts to solve your pest problems across the UK.</p>
+                    </div>
+                </div>
+                <img class='img-responsive' src="img/features/phone-lines.png" alt='featured'>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END FEATURES -->
 <!-- FAQ -->
 <section id="faq" class="sec-faq bg-gradient-vertical">
     <div class="container">

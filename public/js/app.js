@@ -3,6 +3,11 @@ $(document).ready(function () {
     window.App = {
         model: {},
         questions: [],
+        menuItemClicked: function () {
+            if ($('.collapse.navbar-collapse').hasClass('in')) {
+                $('.collapse.navbar-collapse').removeClass('in')
+            }
+        },
         init: function () {
             this.initListeners();
         },
