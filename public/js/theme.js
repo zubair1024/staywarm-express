@@ -9,20 +9,8 @@
         }
     }).scroll();
     // Nav Scroll Click
-    if ($(".smoothscroll > li > a, .btn-getnow").length > 0) {
-        $(".smoothscroll > li > a, .btn-getnow").on("click", function (e) {
-            e.preventDefault();
-            $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -80 + "px"}, 1600, "swing");
-        });
-    }
-    if ($(".cta").length > 0) {
-        $(".cta").on("click", function (e) {
-            e.preventDefault();
-            $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -80 + "px"}, 1600, "swing");
-        });
-    }
-    if ($(".navbar-brand").length > 0) {
-        $(".navbar-brand").on("click", function (e) {
+    if ($(".smoothscroll > li > a, .btn-getnow, .navbar-brand, .cta").length > 0) {
+        $(".smoothscroll > li > a, .btn-getnow, .navbar-brand, .cta").on("click", function (e) {
             e.preventDefault();
             $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -80 + "px"}, 1600, "swing");
         });
