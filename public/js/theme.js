@@ -15,6 +15,12 @@
             $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -80 + "px"}, 1600, "swing");
         });
     }
+    if ($(".cta-btn").length > 0) {
+        $(".cta-btn").on("click", function (e) {
+            e.preventDefault();
+            $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -80 + "px"}, 1600, "swing");
+        });
+    }
     // Screenshot Carousel
     if ($("#screenshots").length > 0) {
         $("#screenshots").append("<div id='hide' class='screenshot-hidden'></div>");

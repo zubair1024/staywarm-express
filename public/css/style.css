@@ -2800,6 +2800,11 @@ Contact
   margin-right: auto;
   width: 25em;
   }
+
+  .col-header-quote{
+    padding-top: 0px;
+  }
+
 }
 
 
@@ -3803,6 +3808,9 @@ Styles for smaller devices
     .slider-caption .col-header-txt h1 {
         font-size: 42px;
     }
+    .col-header-heading{
+      font-size: 40px;
+    }
     .slider-caption .col-header-txt a{
         line-height: 5px;
         font-size: 14px;
@@ -4063,6 +4071,13 @@ Styles for smaller devices
     .slider-caption .col-header-txt {
         padding-top: 80px;
         padding-bottom: 30px;
+    }
+    .col-header-quote{
+      padding-top: 0px !important;
+    }
+
+    .col-header-subheading{
+      font-size: 45px;
     }
     vertical .slider-caption .col-header-txt{
         padding-bottom: 0px;
@@ -4465,6 +4480,11 @@ Styles for smaller devices
   .sec-testimonial .media .media-body p {
     margin: 5px auto;
   }
+
+  .col-header-quote{
+    padding-top: 0px
+  }
+
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -4643,5 +4663,42 @@ body.swal2-shown { overflow-y: none !important; }
 #main-submit{
   background-color: #c6291e;
   border-color: #c7291e;
+}
+
+.cta-banner{
+  margin-top: 20px;
+}
+
+.cta-btn{
+  border: 2px solid #ff4b41;
+  color: #ff4b41;
+  width: 150px;
+  padding: 9px 15px 9px 15px;;
+  text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    vertical-align: middle;
+    border-radius: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.cta-btn:active{
+  color: #ff4b41;
+  text-decoration: none;
+}
+.cta-btn:hover{
+  color: #fff;
+  background-color: #ff4b41;
 }
 
