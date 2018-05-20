@@ -54,24 +54,23 @@
                 <div class="col-sm-5 col-header-txt col-header-quote hidden-sm-down">
 
                     <form class="quote_form">
-                        <!-- <h3>Interested?</h3> -->
                         <div class="form-group">
                             <input id="banner_firstName" name="banner_firstName" type="text" class="form-control uName" placeholder="Name">
-                            <span id="banner-error-0" class="banner-error hidden-item">Please enter a valid first name</span>
+                            <span id="banner-error-md-0" class="banner-error hidden-item">Please enter a valid first name</span>
                         </div>
                         <div class="form-group">
                             <input id="banner_surName" name="banner_surName" type="text" class="form-control sName" placeholder="Surname">
-                            <span id="banner-error-1" class="banner-error hidden-item">Please enter a valid surname</span>
+                            <span id="banner-error-md-1" class="banner-error hidden-item">Please enter a valid surname</span>
                         </div>
                         <div class="form-group">
                             <input id="banner_contactNumber" name="banner_contactNumber" type="number" class="form-control uphone" placeholder="Contact Number">
-                            <span id="banner-error-2" class="banner-error hidden-item">Please enter a valid contact number</span>
+                            <span id="banner-error-md-2" class="banner-error hidden-item">Please enter a valid contact number</span>
                         </div>
                         <div class="form-group">
                             <input id="banner_email" name="banner_email" type="email" class="form-control uEmail" placeholder="Email Address">
-                            <span id="banner-error-3" class="banner-error hidden-item">Please enter a valid email address</span>
+                            <span id="banner-error-md-3" class="banner-error hidden-item">Please enter a valid email address</span>
                         </div>
-                        <a onclick="App.bannerQuote()" id="banner-btn" class="btn-white">Get a Quote
+                        <a onclick="App.bannerQuote('md')" id="banner-btn" class="btn-white">Get a Quote
                         </a>
                     </form>
                 </div>
@@ -86,28 +85,30 @@
     </ul>
 </section>
 <!--End slider area-->
+<!-- Mobile Quote Form -->
 <div class="mobile-form-container">
     <form class="quote_form mobile_quote_form hidden-md-up">
         <div class="form-group">
             <input id="banner_firstName" name="banner_firstName" type="text" class="form-control uName" placeholder="Name">
-            <span id="banner-error-0" class="banner-error hidden-item">Please enter a valid first name</span>
+            <span id="banner-error-sm-0" class="banner-error hidden-item">Please enter a valid first name</span>
         </div>
         <div class="form-group">
             <input id="banner_surName" name="banner_surName" type="text" class="form-control sName" placeholder="Surname">
-            <span id="banner-error-1" class="banner-error hidden-item">Please enter a valid surname</span>
+            <span id="banner-error-sm-1" class="banner-error hidden-item">Please enter a valid surname</span>
         </div>
         <div class="form-group">
             <input id="banner_contactNumber" name="banner_contactNumber" type="number" class="form-control uphone" placeholder="Contact Number">
-            <span id="banner-error-2" class="banner-error hidden-item">Please enter a valid contact number</span>
+            <span id="banner-error-sm-2" class="banner-error hidden-item">Please enter a valid contact number</span>
         </div>
         <div class="form-group">
             <input id="banner_email" name="banner_email" type="email" class="form-control uEmail" placeholder="Email Address">
-            <span id="banner-error-3" class="banner-error hidden-item">Please enter a valid email address</span>
+            <span id="banner-error-sm-3" class="banner-error hidden-item">Please enter a valid email address</span>
         </div>
-        <a onclick="App.bannerQuote()" id="banner-btn" class="cta-btn cat-light">Get a Quote
+        <a onclick="App.bannerQuote('sm')"id="banner-btn" class="cta-btn cat-light">Get a Quote
         </a>
     </form>
 </div>
+<!-- Mobile Quote Form End -->
 <!-- OVERVIEW -->
 <section id="overview" class="sec-overview bg-white">
     <div class="container">
@@ -168,7 +169,7 @@
         <div class="cta-banner">
             <div class="row">
                 <div class="col-sm-12">
-                    <a class="cta-btn" href="#questions">Get my quote</a>
+                    <a class="cta cta-btn" href="#questions">Get my quote</a>
                 </div>
             </div>
         </div>

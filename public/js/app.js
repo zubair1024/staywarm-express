@@ -20,7 +20,7 @@ $(document).ready(function () {
                 }
             }
         },
-        bannerQuote: function () {
+        bannerQuote: function (size) {
             let firstName = $('#banner_firstName').val();
             let surName = $('#banner_surName').val();
             let contactNumber = $('#banner_contactNumber').val();
@@ -29,8 +29,8 @@ $(document).ready(function () {
             let invalid = [];
             //hide all error messages
             for (let i = 0; i < 3; i++) {
-                if (!$(`#banner-error-${i}`).hasClass('hidden-item')) {
-                    $(`#banner-error-${i}`).addClass('hidden-item');
+                if (!$(`#banner-error-${size}-${i}`).hasClass('hidden-item')) {
+                    $(`#banner-error-${size}-${i}`).addClass('hidden-item');
                 }
             }
             if (firstName == '') {
@@ -59,8 +59,8 @@ $(document).ready(function () {
                 $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 700, "swing");
             } else {
                 invalid.forEach(function (i) {
-                    if ($(`#banner-error-${i}`).hasClass('hidden-item')) {
-                        $(`#banner-error-${i}`).removeClass('hidden-item')
+                    if ($(`#banner-error-${size}-${i}`).hasClass('hidden-item')) {
+                        $(`#banner-error-${size}-${i}`).removeClass('hidden-item')
                     }
                 });
             }

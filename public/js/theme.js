@@ -15,8 +15,8 @@
             $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -80 + "px"}, 1600, "swing");
         });
     }
-    if ($(".cta-btn").length > 0) {
-        $(".cta-btn").on("click", function (e) {
+    if ($(".cta").length > 0) {
+        $(".cta").on("click", function (e) {
             e.preventDefault();
             $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -80 + "px"}, 1600, "swing");
         });
