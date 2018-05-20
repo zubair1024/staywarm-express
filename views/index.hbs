@@ -42,13 +42,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 col-header-txt">
-                         <h1>
-                        <i>“Heating as a Service”</i> <br>We promise you will 
-                        
-                        <span>StayWarm</span> for <span>7 Years</span></h1>
-                        
+                    <h1>
+                        <i>“Heating as a Service”</i>
+                        <br>We promise you will
+
+                        <span>StayWarm</span> for
+                        <span>7 Years</span>
+                    </h1>
+
                 </div>
-                <div class="col-sm-5 col-header-txt col-header-quote">
+                <div class="col-sm-5 col-header-txt col-header-quote hidden-sm-down">
+
                     <form class="quote_form">
                         <!-- <h3>Interested?</h3> -->
                         <div class="form-group">
@@ -69,8 +73,6 @@
                         </div>
                         <a onclick="App.bannerQuote()" id="banner-btn" class="btn-white">Get a Quote
                         </a>
-                        <!-- <p id="fftext"></p>
-                            <span id="ffsuccess"></span> -->
                     </form>
                 </div>
             </div>
@@ -84,6 +86,28 @@
     </ul>
 </section>
 <!--End slider area-->
+<div class="mobile-form-container">
+    <form class="quote_form mobile_quote_form hidden-md-up">
+        <div class="form-group">
+            <input id="banner_firstName" name="banner_firstName" type="text" class="form-control uName" placeholder="Name">
+            <span id="banner-error-0" class="banner-error hidden-item">Please enter a valid first name</span>
+        </div>
+        <div class="form-group">
+            <input id="banner_surName" name="banner_surName" type="text" class="form-control sName" placeholder="Surname">
+            <span id="banner-error-1" class="banner-error hidden-item">Please enter a valid surname</span>
+        </div>
+        <div class="form-group">
+            <input id="banner_contactNumber" name="banner_contactNumber" type="number" class="form-control uphone" placeholder="Contact Number">
+            <span id="banner-error-2" class="banner-error hidden-item">Please enter a valid contact number</span>
+        </div>
+        <div class="form-group">
+            <input id="banner_email" name="banner_email" type="email" class="form-control uEmail" placeholder="Email Address">
+            <span id="banner-error-3" class="banner-error hidden-item">Please enter a valid email address</span>
+        </div>
+        <a onclick="App.bannerQuote()" id="banner-btn" class="cta-btn cat-light">Get a Quote
+        </a>
+    </form>
+</div>
 <!-- OVERVIEW -->
 <section id="overview" class="sec-overview bg-white">
     <div class="container">
@@ -142,7 +166,7 @@
             </div>
         </div>
         <div class="cta-banner">
-            <div class="row" >
+            <div class="row">
                 <div class="col-sm-12">
                     <a class="cta-btn" href="#questions">Get my quote</a>
                 </div>
@@ -243,7 +267,8 @@
             <div class="row">
                 <div class="col-sm-4">
                     <p class="question-text">How quickly does cold water run from your kitchen tap?</p>
-                    {{!-- <p class="question-text question-sub-text">How long does it take to fill a pint glass? 5 Seconds is fast, 10 seconds is slow, anything in between
+                    {{!--
+                    <p class="question-text question-sub-text">How long does it take to fill a pint glass? 5 Seconds is fast, 10 seconds is slow, anything in between
                         is average.</p> --}}
                 </div>
                 <div class="col-sm-8">
@@ -699,7 +724,7 @@
             <div class="col-sm-7">
                 <h2 class="sec-title">Get the My 24|7 App Now</h2>
                 <div class="hr"></div>
-                    <p class="subheader">Get our app now to manage all your policies and get other exciting benefits</p>
+                <p class="subheader">Get our app now to manage all your policies and get other exciting benefits</p>
                 <h4>Download from:</h4>
                 <a href="#">
                     <img src="img/appstore/app-store-nobg.png" alt="app">
