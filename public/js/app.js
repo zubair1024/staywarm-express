@@ -102,13 +102,13 @@ $(document).ready(function () {
                         this.questions[i].addClass('hidden-item')
                     }
                 }
-                swal({
-                    position: 'top-end',
-                    type: 'success',
-                    title: 'Your query has been sent. We will get back to you shortly.',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
+                // swal({
+                //     position: 'top-end',
+                //     type: 'success',
+                //     title: 'Your query has been sent. We will get back to you shortly.',
+                //     showConfirmButton: false,
+                //     timer: 1500
+                // })
                 if ($('#thankyou').hasClass('hidden-item')) {
                     $('#thankyou').removeClass('hidden-item');
                 }
@@ -148,28 +148,13 @@ $(document).ready(function () {
                             this.questions[1].removeClass('hidden-item');
                             break;
                         case 'electric':
-                            swal({
-                                type: 'error',
-                                title: 'Oops...',
-                                text: 'At this point in time we do not provide heating solution for Electric fuel.',
-                                footer: '',
-                            })
+                            $('#mySmallModalLabel').modal();
                             break;
                         case 'lpg':
-                            swal({
-                                type: 'error',
-                                title: 'Oops...',
-                                text: 'At this point in time we do not provide heating solution for LPG.',
-                                footer: '',
-                            })
+                            $('#mySmallModalLabel').modal();
                             break;
                         case 'oil':
-                            swal({
-                                type: 'error',
-                                title: 'Oops...',
-                                text: 'At this point in time we do not provide heating solution for Oil.',
-                                footer: '',
-                            })
+                            $('#mySmallModalLabel').modal();
                             break;
                     }
                     break;

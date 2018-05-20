@@ -4537,7 +4537,7 @@ Styles for smaller devices
   background-image: -webkit-linear-gradient(0deg, #0000006b 0%, #750000b5 100%);
 }
 
-
+body.swal2-shown { overflow-y: none !important; }
 
 
 
