@@ -145,16 +145,19 @@ $(document).ready(function () {
                 case 0:
                     switch (questionAnswer) {
                         case 'gas':
-                            this.questions[1].removeClass('hidden-item');
+                            this.questions[3].removeClass('hidden-item');
                             break;
                         case 'electric':
-                            $('#mySmallModalLabel').modal();
+                        this.questions[3].removeClass('hidden-item');
+                            // $('#mySmallModalLabel').modal();
                             break;
                         case 'lpg':
-                            $('#mySmallModalLabel').modal();
+                        this.questions[3].removeClass('hidden-item');
+                            // $('#mySmallModalLabel').modal();
                             break;
                         case 'oil':
-                            $('#mySmallModalLabel').modal();
+                        this.questions[3].removeClass('hidden-item');
+                            // $('#mySmallModalLabel').modal();
                             break;
                     }
                     break;
