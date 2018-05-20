@@ -1141,6 +1141,84 @@ header.image-home:before{
     top: 470px;
 }
 
+.cta-banner{
+  margin-top: 20px;
+}
+
+.cta-btn{
+  border: 2px solid #ff4b41;
+  color: #ff4b41;
+  width: 150px;
+  padding: 9px 15px 9px 15px;;
+  text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    vertical-align: middle;
+    border-radius: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.cta-btn:active{
+  color: #ff4b41;
+  text-decoration: none;
+}
+.cta-btn:hover{
+  color: #fff;
+  background-color: #ff4b41;
+}
+
+.cat-light{
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.cat-light:hover{
+  background-color: #fff;
+  color: #ff4b41; 
+}
+
+
+.mobile_quote_form{
+  display: block;
+  margin: 30px auto 10px;
+  background-color: #df1514db !important;
+  width: auto;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+.mobile_quote_form .form-group input::placeholder,
+.mobile_quote_form .form-group textarea::placeholder{
+  opacity: 0.7 !important;
+}
+
+@media (max-width: 575px){
+  .mobile_quote_form{
+  margin-right: 50px;
+  margin-left: 50px;
+  }
+}
+
+@media (min-width: 576px)
+{
+  .mobile_quote_form{
+    width: 40rem;
+  }
+}
+
+
 /*========== End slider-area css===========*/
 /*--------------------------------
 Features
@@ -3806,7 +3884,7 @@ Styles for smaller devices
   }
 /*    slider responsive */
     .slider-caption .col-header-txt h1 {
-        font-size: 42px;
+        font-size: 32px;
     }
     .col-header-heading{
       font-size: 40px;
@@ -4484,7 +4562,6 @@ Styles for smaller devices
   .col-header-quote{
     padding-top: 0px
   }
-
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -4511,6 +4588,11 @@ Styles for smaller devices
   .sec-team .row > [class^="col-"]:nth-last-child(1),
   .sec-team .row > [class^="col-"]:nth-last-child(2) {
     margin-bottom: 0;
+  }
+
+  .mobile_quote_form{
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -4665,68 +4747,18 @@ body.swal2-shown { overflow-y: none !important; }
   border-color: #c7291e;
 }
 
-.cta-banner{
-  margin-top: 20px;
-}
-
-.cta-btn{
-  border: 2px solid #ff4b41;
-  color: #ff4b41;
-  width: 150px;
-  padding: 9px 15px 9px 15px;;
-  text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    vertical-align: middle;
-    border-radius: 20px;
-    margin-right: 15px;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-size: 14px;
-    -webkit-transition: all 0.25s ease;
-    -moz-transition: all 0.25s ease;
-    -ms-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-}
-.cta-btn:active{
-  color: #ff4b41;
-  text-decoration: none;
-}
-.cta-btn:hover{
+.cta-submit-btn{
   color: #fff;
-  background-color: #ff4b41;
-}
-
-.cat-light{
-  color: #fff;
-  border: 2px solid #fff;
-}
-
-.cat-light:hover{
+  border-color: #c6291e;
   background-color: #fff;
-  color: #ff4b41; 
 }
 
-
-.mobile_quote_form{
-  display: block;
-    margin: 30px auto 10px;
-  background-color: #df1514;
-  width: 40rem;
-  vertical-align: middle;
-  text-align: center;
+#main-submit:hover, .cta-submit-btn:hover{
+  color: #c6291e;
+  border-color: #c6291e;
+  background-color: #fff;
 }
 
-
-.mobile_quote_form .form-group input::placeholder,
-.mobile_quote_form .form-group textarea::placeholder{
-  opacity: 0.7;
-}
 
 
 

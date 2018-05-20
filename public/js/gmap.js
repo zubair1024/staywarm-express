@@ -1,8 +1,8 @@
 //contact google map
 
 // These are the values for your desired longitude and latitude
-var lat=51.508742;
-var long=-0.120850;   
+var lat=53.769742;
+var long=-2.388869;   
 
 if ($("#googleMap").length > 0)
 {
@@ -17,7 +17,7 @@ if ($("#googleMap").length > 0)
         });
         var map = new google.maps.Map(document.getElementById("googleMap"), {
             center: myCenter,
-            zoom: 12,
+            zoom: 17,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             scrollwheel: false,
             mapTypeControl: false,
