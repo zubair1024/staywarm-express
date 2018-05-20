@@ -3438,6 +3438,10 @@ Styles for smaller devices
   .question-text, .question-text.question-sub-text{
     text-align: right;
   }
+
+  .ans-wrapper {
+    text-align: left;
+}
 }
 
 @media (min-width: 768px) {
@@ -4634,5 +4638,10 @@ body.swal2-shown { overflow-y: none !important; }
 .main-error{
   font-size: 12px;
   color:red;
+}
+
+#main-submit{
+  background-color: #c6291e;
+  border-color: #c7291e;
 }
 
