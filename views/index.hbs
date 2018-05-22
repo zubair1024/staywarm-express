@@ -104,7 +104,7 @@
             <input id="banner_sm_email" name="banner_sm_email" type="email" class="form-control uEmail" placeholder="Email Address">
             <span id="banner-error-sm-3" class="banner-error hidden-item">Please enter a valid email address</span>
         </div>
-        <a onclick="App.bannerQuote('sm')"id="banner-btn-sm" class="cta-btn cat-light">Get a Quote
+        <a onclick="App.bannerQuote('sm')" id="banner-btn-sm" class="cta-btn cat-light">Get a Quote
         </a>
     </form>
 </div>
@@ -120,47 +120,50 @@
             <div class="col-sm-6 col-md-3">
                 <div class="wrapper ovi-item animate">
                     <div class="wrapper-img">
-                        <img src="./img/icons/tap.png" style="height: 64px">
+                        <img src="./img/icons/tap.png" style="height: 64px" alt="Savings">
                     </div>
                     <hr>
-                    <h5>Hot Water And Heating</h5>
+                    <h5>Hot Water &amp; Heating *</h5>
                     <p>We promise Hot Water and Heating for 7 Years.</p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-3">
                 <div class="wrapper ovi-item animate delay-a">
                     <div class="wrapper-img">
-                        <img src="./img/icons/water-heater.png" style="height: 64px">
+                        <img src="./img/icons/water-heater.png" style="height: 64px" alt="Water Heater">
                     </div>
                     <hr>
-                    <h5>Free Annual Service</h5>
+                    <h5>Annual Service *</h5>
                     <p>We make sure that you will get your boiler service every year for 7 Years.</p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-3">
                 <div class="wrapper ovi-item animate delay-b">
                     <div class="wrapper-img">
-                        <img src="./img/icons/locked.png" style="height: 64px">
+                        <img src="./img/icons/locked.png" style="height: 64px" alt="Annual Service">
                     </div>
                     <hr>
-                    <h5>Fixed Monthly Cost</h5>
+                    <h5>Fixed Monthly Cost *</h5>
                     <p>No hidden Fees and small print, straight forward pricing.</p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-3">
                 <div class="wrapper ovi-item animate delay-c">
                     <div class="wrapper-img">
-                        <img src="./img/icons/phone-call.png" style="height: 64px">
+                        <img src="./img/icons/phone-call.png" style="height: 64px" alt="24x7 calls">
                     </div>
                     <hr>
-                    <h5>24 Hours Claim Line</h5>
+                    <h5>24 Hours Claim Line *</h5>
                     <p>We are available every hour of the day, every day of the year for your claims.</p>
                 </div>
             </div>
         </div>
+        <span style="font-size: 12px;">* Subject to Terms &amp; Conditions</span>
+        <br>
         <div class="cta-banner">
             <div class="row">
                 <div class="col-sm-12">
+
                     <a class="cta cta-btn" href="#questions">Get my quote</a>
                 </div>
             </div>
@@ -197,16 +200,16 @@
                 <div class="col-sm-8">
                     <div class="ans-wrapper">
                         <a onclick="App.optionSelected(0,'gas','What type of heating system do you have?', this);">
-                            <img src="img/gas.png">
+                            <img src="img/gas.png" alt="Gas">
                         </a>
                         <a onclick="App.optionSelected(0,'electric','What type of heating system do you have?', this);">
-                            <img src="img/electric.png">
+                            <img src="img/electric.png" alt="Electric">
                         </a>
                         <a onclick="App.optionSelected(0,'lpg','What type of heating system do you have?', this);">
-                            <img src="img/lpg.png">
+                            <img src="img/lpg.png" alt="LPG">
                         </a>
                         <a onclick="App.optionSelected(0,'oil','What type of heating system do you have?', this);">
-                            <img src="img/oil.png">
+                            <img src="img/oil.png" alt="Oil">
                         </a>
                     </div>
                 </div>
@@ -225,10 +228,10 @@
                 <div class="col-sm-8">
                     <div class="ans-wrapper">
                         <a onclick="App.optionSelected(1,'yes','Do you have a hot water cylinder',this);">
-                            <img src="img/water-cylinder-yes.png">
+                            <img src="img/water-cylinder-yes.png" alt="Yes">
                         </a>
                         <a onclick="App.optionSelected(1,'no','Do you have a hot water cylinder',this);">
-                            <img src="img/water-cylinder-no.png">
+                            <img src="img/water-cylinder-no.png" alt="No">
                         </a>
                     </div>
                 </div>
@@ -259,18 +262,21 @@
         <div class="question question-four">
             <div class="row">
                 <div class="col-sm-4">
-                    <p class="question-text">How quickly does cold water run from your kitchen tap?</p>
+                    <p class="question-text">How many bathtubs do you have?</p>
                 </div>
                 <div class="col-sm-8">
                     <div class="ans-wrapper">
-                        <a onclick="App.optionSelected(3,'slow','How quickly does cold water run from your kitchen tap',this);">
-                            <img src="img/tap-slow.png">
+                        <a onclick="App.optionSelected(3,'0','How many bathtubs do you have',this);">
+                            <img src='img/bathtub-0.png' alt="None">
                         </a>
-                        <a onclick="App.optionSelected(3,'average','How quickly does cold water run from your kitchen tap',this);">
-                            <img src="img/tap-average.png">
+                        <a onclick="App.optionSelected(3,'1','How many bathtubs do you have',this);">
+                            <img src='img/bathtub-1.png' alt="2">
                         </a>
-                        <a onclick="App.optionSelected(3,'fast','How quickly does cold water run from your kitchen tap',this);">
-                            <img src="img/tap-fast.png">
+                        <a onclick="App.optionSelected(3,'2','How many bathtubs do you have',this);">
+                            <img src='img/bathtubs-2.png' alt="3">
+                        </a>
+                        <a onclick="App.optionSelected(3,'3','How many bathtubs do you have',this);">
+                            <img src='img/bathtubs-3-or-more.png' alt="3+">
                         </a>
                     </div>
                 </div>
@@ -286,13 +292,13 @@
                 <div class="col-sm-8">
                     <div class="ans-wrapper">
                         <a onclick="App.optionSelected(4,'3','How many bedrooms do you have',this);">
-                            <img src="img/bedroom-1-3.png">
+                            <img src="img/bedroom-1-3.png" alt="1-3">
                         </a>
                         <a onclick="App.optionSelected(4,'4','How many bedrooms do you have',this);">
-                            <img src="img/bedroom-4-min.png">
+                            <img src="img/bedroom-4-min.png" alt="4">
                         </a>
                         <a onclick="App.optionSelected(4,'5','How many bedrooms do you have',this);">
-                            <img src="img/bedroom-5-or-more.png">
+                            <img src="img/bedroom-5-or-more.png" alt="5+">
                         </a>
                     </div>
                 </div>
@@ -348,9 +354,8 @@
         <div id="thankyou" class="hidden-item">
             <div class="jumbotron text-xs-center">
                 <h1 class="display-3">Thank You!</h1>
-                <p class="lead">
-                    Our engineer will visit you on your chosen day and you will soon have a brand new boiler covered and guaranteed for 7 years!</p>
-                <strong>We will contact you shortly to book a survey date.</strong>
+                <p class="lead">We will contact you shortly to book a survey date.</p>
+                <strong>You will soon have a brand new boiler covered and guaranteed for 7 years!</strong>
                 </p>
                 <hr>
                 <p class="lead">
@@ -382,7 +387,7 @@
 <section id="howitworks" class="sec-steps bg-gradient-vertical">
     <h2 class="sec-title">How it works</h2>
     <div class="hr"></div>
-    <p class="subheader">Buy a new boiler online today by 3pm and get it installed the next day!</p>
+    <p class="subheader">Get a quote today and get it installed the next 72 hours!</p>
     <div class="container">
         <div class="row row-1">
             <div class="col-sm-12 col-lg-10 col-lg-offset-1">
@@ -470,7 +475,7 @@
                 <div class="faq-inner">
                     <h2 class="sec-title">About Us</h2>
                     <div class="hr"></div>
-                    <p class="subheader">We offer an improved standard of service and honest, reliable and affordable rates.</p>
+                    <p class="subheader">We offer an improved standard of service which includes providing honest, reliable and affordable rates.</p>
                     <!--accordion-->
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default animate ">
@@ -564,7 +569,7 @@
                 <div class="wrapper-testimonial">
                     <div class="media">
                         <div class="media-left">
-                            <img src="img/testimonial/review.jpg" alt="test1">
+                            <img src="img/testimonial/review.jpg" alt="review-1">
                         </div>
                         <div class="media-body">
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
@@ -584,7 +589,7 @@
                 <div class="wrapper-testimonial">
                     <div class="media">
                         <div class="media-left">
-                            <img src="img/testimonial/review.jpg" alt="test2">
+                            <img src="img/testimonial/review.jpg" alt="review-2">
                         </div>
                         <div class="media-body">
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
@@ -603,7 +608,7 @@
                 <div class="wrapper-testimonial">
                     <div class="media">
                         <div class="media-left">
-                            <img src="img/testimonial/review.jpg" alt="test1">
+                            <img src="img/testimonial/review.jpg" alt="review-3">
                         </div>
                         <div class="media-body">
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
@@ -622,7 +627,7 @@
                 <div class="wrapper-testimonial">
                     <div class="media">
                         <div class="media-left">
-                            <img src="img/testimonial/review.jpg" alt="test2">
+                            <img src="img/testimonial/review.jpg" alt="review-4">
                         </div>
                         <div class="media-body">
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
@@ -641,7 +646,7 @@
                 <div class="wrapper-testimonial">
                     <div class="media">
                         <div class="media-left">
-                            <img src="img/testimonial/review.jpg" alt="test1">
+                            <img src="img/testimonial/review.jpg" alt="review-5">
                         </div>
                         <div class="media-body">
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
@@ -660,7 +665,7 @@
                 <div class="wrapper-testimonial">
                     <div class="media">
                         <div class="media-left">
-                            <img src="img/testimonial/review.jpg" alt="test2">
+                            <img src="img/testimonial/review.jpg" alt="review-6">
                         </div>
                         <div class="media-body">
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
@@ -694,14 +699,14 @@
                 <p class="subheader">Get our app now to manage all your policies and get other exciting benefits</p>
                 <h4>Download from:</h4>
                 <a href="https://itunes.apple.com/ae/app/my247/id1320866280?mt=8" target="_blank">
-                    <img src="img/appstore/app-store-nobg.png" alt="app">
+                    <img src="img/appstore/app-store-nobg.png" alt="App Store">
                 </a>
                 <a href="https://play.google.com/store/apps/details?id=io.ionic.my247App&hl=en" target="_blank">
-                    <img src="img/appstore/play-store-nobg.png" alt="app">
+                    <img src="img/appstore/play-store-nobg.png" alt="Play Store">
                 </a>
             </div>
             <div class="col-sm-5">
-                <img class="get-app-mockup animate delay-c" src="img/appstore/mockup-tab.png" alt="mockup">
+                <img class="get-app-mockup animate delay-c" src="img/appstore/mockup-tab.png" alt="mobile app">
             </div>
         </div>
     </div>
@@ -718,7 +723,6 @@
             <div class="col-md-8 animate">
                 <div class="contact">
                     <h3>Contact us</h3>
-                    <!-- <p>Donec interdum dapibus facilisis aliquam congue tempus augue non bibendum ipsum dictum</p> -->
                     <div class="contact-info">
                         <h5>
                             <i class="icon ion-ios-location"></i> Location</h5>
@@ -731,7 +735,7 @@
                     <div class="contact-info">
                         <h5>
                             <i class="icon ion-ios-telephone"></i> Phone</h5>
-                        <h6>(+045) 222-798-3532</h6>
+                        <h6>(+045) 345-3192-247</h6>
                     </div>
                     <div class="contact-info">
                         <h5>

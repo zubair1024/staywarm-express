@@ -1,199 +1,116 @@
 $(document).ready(function () {
-    "use strict";
     window.App = {
-        model: {},
-        questions: [],
-        menuItemClicked: function () {
-            if ($('.collapse.navbar-collapse').hasClass('in')) {
-                $('.collapse.navbar-collapse').removeClass('in')
-            }
+        'model': {},
+        'questions': [],
+        'menuItemClicked': function () {
+            $('.collapse.navbar-collapse').hasClass('in') && $('.collapse.navbar-collapse').removeClass('in');
         },
-        init: function () {
+        'init': function () {
             this.initListeners();
         },
-        initListeners: function () {
-            let questions = $('.question');
-            for (let i = 0; i < questions.length; i++) {
-                this.questions.push($(questions[i]));
-                if (i != 0) {
-                    $(questions[i]).addClass('hidden-item');
-                }
-            }
+        'initListeners': function () {
+            for (var e = $('.question'), s = 0; s < e.length; s++) this.questions.push($(e[s])), 0 != s && $(e[s]).addClass('hidden-item');
         },
-        bannerQuote: function (size) {
-            let firstName = $(`#banner_${size}_firstName`).val();
-            let surName = $(`#banner_${size}_surName`).val();
-            let contactNumber = $(`#banner_${size}_contactNumber`).val();
-            let email = $(`#banner_${size}_email`).val();
-            let valid = true;
-            let invalid = [];
-            //hide all error messages
-            for (let i = 0; i < 3; i++) {
-                if (!$(`#banner-error-${size}-${i}`).hasClass('hidden-item')) {
-                    $(`#banner-error-${size}-${i}`).addClass('hidden-item');
+        'bannerQuote': function (e) {
+            for (var s = $('#banner_' + e + '_firstName').val(), i = $('#banner_' + e + '_surName').val(), a = $('#banner_' + e + '_contactNumber').val(), t = $('#banner_' + e + '_email').val(), n = [], o = 0; o < 3; o++) $('#banner-error-' + e + '-' + o).hasClass('hidden-item') || $('#banner-error-' + e + '-' + o).addClass('hidden-item');
+
+            '' == s && n.push(0), '' == i && n.push(1), '' === a && n.push(2), '' !== t && t.indexOf('@') > -1 || n.push(3), 0 === n.length ? (this.model.firstName = s, this.model.surName = i, this.model.contactNumber = a, this.model.email = t, $('#banner_' + e + '_firstName').prop('disabled', !0), $('#banner_' + e + '_surName').prop('disabled', !0), $('#banner_' + e + '_contactNumber').prop('disabled', !0), $('#banner_' + e + '_email').prop('disabled', !0), $('#banner-btn-' + e).addClass('disabled'), $('html, body').animate({
+                'scrollTop': $($('#questions')).offset().top - 80 + 'px'
+            }, 700, 'swing')) : n.forEach(function (s) {
+                $('#banner-error-' + e + '-' + s).hasClass('hidden-item') && $('#banner-error-' + e + '-' + s).removeClass('hidden-item');
+            });
+        },
+        'mainQuote': function () {
+            for (var e = $('#main_firstName').val(), s = $('#main_surName').val(), i = $('#main_contactNumber').val(), a = $('#main_email').val(), t = [], n = 0; n < 3; n++) $('#main-error-' + n).hasClass('hidden-item') || $('#main-error-' + n).addClass('hidden-item');
+
+            if (('' == e && t.push(0), '' == s && t.push(1), '' === i && t.push(2), '' !== a && a.indexOf('@') > -1 || t.push(3), 0 === t.length)) {
+                this.model.firstName = e, this.model.surName = s, this.model.contactNumber = i, this.model.email = a;
+
+                for (var n = 0; n <= this.questions.length; n++) this.questions[n] && !this.questions[n].hasClass('hidden-item') && this.questions[n].addClass('hidden-item');
+
+                this.model.firstName, this.model.surName, this.model.contactNumber, this.model.email, this.model['What type of heating system do you have?'], this.model['How many bathtubs do you have'], this.model['How many bedrooms do you have'];
+                window.location.hash = 'thankyou', $('#thankyou').hasClass('hidden-item') && $('#thankyou').removeClass('hidden-item'), $('html, body').animate({
+                    'scrollTop': $($('#questions')).offset().top - 80 + 'px'
+                }, 1600, 'swing');
+            } else t.forEach(function (e) {
+                $('#main-error-' + e).hasClass('hidden-item') && $('#main-error-' + e).removeClass('hidden-item');
+            });
+        },
+        'optionSelected': function (e, s, i, a) {
+            $('html, body').animate({
+                'scrollTop': $($(a)).offset().top - 200 + 'px'
+            }, 700, 'swing');
+
+            for (var t = e; t <= this.questions.length; t++) {
+                t != e && this.questions[t] && !this.questions[t].hasClass('hidden-item') && this.questions[t].addClass('hidden-item');
+
+                for (var n = $(this.questions[t]).children(), o = 0; o < n.length; o++) {
+                    var r = $(n[o]).find('img');
+                    r.hasClass('active') && r.removeClass('active');
                 }
-            }
-            if (firstName == '') {
-                invalid.push(0);
-            }
-            if (surName == '') {
-                invalid.push(1);
-            }
-            if (contactNumber === '') {
-                invalid.push(2);
-            }
-            if (email === '' || (!(email.indexOf('@') > -1))) {
-                invalid.push(3);
-            }
-            if (invalid.length === 0) {
-                this.model.firstName = firstName;
-                this.model.surName = surName;
-                this.model.contactNumber = contactNumber;
-                this.model.email = email;
-                $(`#banner_${size}_firstName`).prop('disabled', true);
-                $(`#banner_${size}_surName`).prop('disabled', true);
-                $(`#banner_${size}_contactNumber`).prop('disabled', true);
-                $(`#banner_${size}_email`).prop('disabled', true);
-                $(`#banner-btn-${size}`).addClass('disabled');
-                //scroll to questions
-                $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 700, "swing");
-            } else {
-                invalid.forEach(function (i) {
-                    if ($(`#banner-error-${size}-${i}`).hasClass('hidden-item')) {
-                        $(`#banner-error-${size}-${i}`).removeClass('hidden-item')
-                    }
-                });
             }
 
-        },
-        mainQuote() {
-            let firstName = $('#main_firstName').val();
-            let surName = $('#main_surName').val();
-            let contactNumber = $('#main_contactNumber').val();
-            let email = $('#main_email').val();
-            let valid = true;
-            let invalid = [];
-            //hide all error messages
-            for (let i = 0; i < 3; i++) {
-                if (!$(`#main-error-${i}`).hasClass('hidden-item')) {
-                    $(`#main-error-${i}`).addClass('hidden-item');
-                }
-            }
-            if (firstName == '') {
-                invalid.push(0);
-            }
-            if (surName == '') {
-                invalid.push(1);
-            }
-            if (contactNumber === '') {
-                invalid.push(2);
-            }
-            if (email === '' || (!(email.indexOf('@') > -1))) {
-                invalid.push(3);
-            }
-            if (invalid.length === 0) {
-                this.model.firstName = firstName;
-                this.model.surName = surName;
-                this.model.contactNumber = contactNumber;
-                this.model.email = email;
-                //hide
-                for (let i = 0; i <= this.questions.length; i++) {
-                    if (this.questions[i] && !this.questions[i].hasClass('hidden-item')) {
-                        this.questions[i].addClass('hidden-item')
-                    }
-                }
-                // swal({
-                //     position: 'top-end',
-                //     type: 'success',
-                //     title: 'Your query has been sent. We will get back to you shortly.',
-                //     showConfirmButton: false,
-                //     timer: 1500
-                // })
-                if ($('#thankyou').hasClass('hidden-item')) {
-                    $('#thankyou').removeClass('hidden-item');
-                }
-                //scroll to questions
-                $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 1600, "swing");
-            } else {
-                invalid.forEach(function (i) {
-                    if ($(`#main-error-${i}`).hasClass('hidden-item')) {
-                        $(`#main-error-${i}`).removeClass('hidden-item')
-                    }
-                });
-            }
-        },
-        optionSelected: function (questionNumber, questionAnswer, questionLabel, item) {
-            //scroll to questions
-            $("html, body").animate({ scrollTop: $($(item)).offset().top - 200 + "px" }, 700, "swing");
-            //hide all after
-            for (let i = questionNumber; i <= this.questions.length; i++) {
-                if (i != questionNumber) {
-                    if (this.questions[i] && !this.questions[i].hasClass('hidden-item')) {
-                        this.questions[i].addClass('hidden-item')
-                    }
-                }
-                let options = $(this.questions[i]).children();
-                for (let i = 0; i < options.length; i++) {
-                    let image = $(options[i]).find('img');
-                    if (image.hasClass('active')) {
-                        image.removeClass('active')
-                    }
-                }
-            }
-            $(item).find('img').addClass('active');
-            switch (questionNumber) {
+            switch (($(a).find('img').addClass('active'), e)) {
                 case 0:
-                    switch (questionAnswer) {
+                    switch (s) {
                         case 'gas':
-                            this.questions[3].removeClass('hidden-item');
-                            break;
                         case 'electric':
-                        this.questions[3].removeClass('hidden-item');
-                            // $('#mySmallModalLabel').modal();
-                            break;
                         case 'lpg':
-                        this.questions[3].removeClass('hidden-item');
-                            // $('#mySmallModalLabel').modal();
-                            break;
                         case 'oil':
-                        this.questions[3].removeClass('hidden-item');
-                            // $('#mySmallModalLabel').modal();
-                            break;
+                            this.questions[3].removeClass('hidden-item');
                     }
+
                     break;
+
                 case 1:
-                    if (questionAnswer == 'yes') {
-                        this.questions[2].removeClass('hidden-item');
-                    } else {
-                        this.questions[3].removeClass('hidden-item');
-                    }
+                    'yes' == s ? this.questions[2].removeClass('hidden-item') : this.questions[3].removeClass('hidden-item');
                     break;
+
                 case 2:
                     this.questions[3].removeClass('hidden-item');
                     break;
+
                 case 3:
                     this.questions[4].removeClass('hidden-item');
                     break;
+
                 case 4:
-                    this.questions[5].removeClass('hidden-item');
-                    if (
-                        this.model.firstName &&
-                        this.model.surName &&
-                        this.model.contactNumber &&
-                        this.model.email
-                    ) {
-                        $('#main_firstName').val(this.model.firstName);
-                        $('#main_surName').val(this.model.surName);
-                        $('#main_contactNumber').val(this.model.contactNumber);
-                        $('#main_email').val(this.model.email);
-                    }
-                    break;
-                default:
-                    //no nothing
-                    break;
-                    this.model[questionLabel] = questionAnswer;
+                    this.questions[5].removeClass('hidden-item'), this.model.firstName && this.model.surName && this.model.contactNumber && this.model.email && ($('#main_firstName').val(this.model.firstName), $('#main_surName').val(this.model.surName), $('#main_contactNumber').val(this.model.contactNumber), $('#main_email').val(this.model.email));
             }
+
+            this.model[i] = s;
         }
-    }
-    App.init();
+    }, App.init();
 });
+
+//hide all error messages
+
+//scroll to questions
+
+//hide all error messages
+
+//hide
+
+//transform values
+
+//change location for tracking
+
+// $.ajax({
+//     url: '',
+//     method: '',
+//     success: () => {
+
+//     },
+//     error: () => {
+
+//     }
+// });
+
+//scroll to questions
+
+//scroll to questions
+
+//hide all after
+
+//no nothing
+//# sourceMappingURL=app.js.map

@@ -1,0 +1,3 @@
+window.App = {
+    'hello':'world'
+}
