@@ -14,6 +14,13 @@ router.get('/dev', (req, res) => {
   });
 });
 
+
+router.get('/.well-known/acme-challenge/OStyx9PAUK0T2x4Pb8atGxT4b42pg5JogmudT9uuyiM', (req, res) => {
+  res.type('text/plain');
+  res.send('OStyx9PAUK0T2x4Pb8atGxT4b42pg5JogmudT9uuyiM.Nj7TUfeTu7aF_1fjMIf9VRf3b6xIuzJ9QBPH-oG_O0E');
+});
+
+
 //robot.txt file handling
 router.get('/robots.txt', function (req, res) {
   res.type('text/plain');

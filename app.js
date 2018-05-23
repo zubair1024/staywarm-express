@@ -38,6 +38,8 @@ global.transporter = nodemailer.createTransport({
 // Add a route to the sitemap
 app.get('/sitemap', sitemap(app))
 
+app.get('/health-check', (req, res) => res.sendStatus(200));
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -45,8 +47,6 @@ app.use((req, res, next) => {
   err.status = 404;
   next(err);
 });
-
-
 
 // error handlers
 
