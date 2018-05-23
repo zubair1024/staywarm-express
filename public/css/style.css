@@ -1305,7 +1305,7 @@ Features
 }
 
 .sec-features [class^="col-"]:not(.container-acting) {
-  max-width: 480px;
+  /* max-width: 480px; */
   margin: 0 auto 15px;
 }
 
@@ -3670,7 +3670,7 @@ Styles for smaller devices
     margin-bottom: 30px;
   }
 
-  .sec-features [class^="col-"]:not(.container-acting) {
+  /* .sec-features [class^="col-"]:not(.container-acting) {
     float: none;
     position: absolute;
   }
@@ -3693,7 +3693,7 @@ Styles for smaller devices
   .sec-features [class^="col-"]:not(.container-acting).feat-bottom-right {
     bottom: 70px;
     right: 33px;
-  }
+  } */
 }
 
 @media (min-width: 1200px) {
@@ -3834,7 +3834,7 @@ Styles for smaller devices
   }
 
   .sec-features img {
-    width: 50%;
+    /* width: 50%; */
   }
 
   .sec-faq {
@@ -3927,7 +3927,7 @@ Styles for smaller devices
   }
 
   .sec-features img {
-    display: none;
+    /* display: none; */
   }
 
   .sec-features p br {
