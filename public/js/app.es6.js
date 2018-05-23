@@ -125,6 +125,7 @@ $(document).ready(function () {
                     'whatheating': this.model['What type of heating system do you have?'],
                     'HowManyBathtubsAreInYourHome': this.model['How many bathtubs do you have'],
                     'rooms': this.model['How many bedrooms do you have'],
+                    'brooms': this.model['How many bathrooms do you have'],
                     'WouldYouLikeItRemoved': '',
                     'DoYouHaveAHotWaterCylinder': '',
                     'DoYouHaveSeperateColdWaterTank': '',
