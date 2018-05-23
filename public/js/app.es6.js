@@ -29,7 +29,8 @@ $(document).ready(function () {
                 email: email,
                 message: message
             }).done(function (data) {
-                alert("Data Loaded: " + data);
+                $('#contact-form-submit').prop('disabled', true);
+                alert('Thank you. We will get in touch with you shortly');
             });
         },
         bannerQuote: function (size) {
