@@ -21,14 +21,17 @@ $(document).ready(function () {
             }
         },
         submitContactForm: function () {
+            let name = $('form-uname').val();
+            let email = $('form-uemail').val();
+            let message = $('form-message').val();
             $.ajax({
                 url: '/contact',
                 method: 'POST',
                 data: {
-                    name: '',
-                    email: '',
-                    message: ''
-                }
+                    name: name,
+                    email: email,
+                    message: message
+                },
                 success: function (data) {
                     console.log(data);
                 },
