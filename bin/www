@@ -33,16 +33,11 @@ app.set('port', port);
 var server = https.createServer(options, app);
 
 
-
-// set up a route to redirect http to https
-http.get('*', function(req, res) {  
-    res.redirect('https://247staywarm.co.uk' + req.url);
-    // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
-    // res.redirect('https://example.com' + req.url);
-})
-
-// have it listen on 8080
-http.listen(80);
+var http = require('http');
+http.createServer(function (req, res) {
+    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    res.end();
+}).listen(80);
 
 /**
  * Listen on provided port, on all network interfaces.
