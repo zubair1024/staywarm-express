@@ -162,16 +162,16 @@ $(document).ready(function () {
                     },
                     success: function (data) {
                         console.log(data);
+                        if ($('#thankyou').hasClass('hidden-item')) {
+                            $('#thankyou').removeClass('hidden-item');
+                        }
+                        //scroll to questions
+                        $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 1600, "swing");
                     },
                     error: function (err) {
-                        console.log(err);
+                        alert('An error occured. Please try again later.')
                     }
                 });
-                if ($('#thankyou').hasClass('hidden-item')) {
-                    $('#thankyou').removeClass('hidden-item');
-                }
-                //scroll to questions
-                $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 1600, "swing");
             } else {
                 invalid.forEach(function (i) {
                     if ($(`#main-error-${i}`).hasClass('hidden-item')) {
