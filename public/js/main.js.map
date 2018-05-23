@@ -1,1 +1,0 @@
-{"version":3,"sources":["main.es6.js"],"names":[],"mappings":"AAAA,MAAM,IAAI,GAAG;AACT,aAAQ,OAAO;CAClB,CAAA","file":"main.js","sourcesContent":["window.App = {\r\n    'hello':'world'\r\n}"]}

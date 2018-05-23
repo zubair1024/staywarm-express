@@ -686,6 +686,15 @@ End Most Common Class
 Overview
 ----------------------------------*/
 
+@media (min-width: 992px){ 
+.col-md-3.promise-element {
+  width: 20%;
+}
+}
+
+
+
+
 .sec-overview {
   padding-top: 50px;
   padding-bottom: 100px;
@@ -768,7 +777,7 @@ Overview
 .sec-overview [class^="col-"] h5 {
   font-weight: 700;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 15px;
   text-transform: uppercase;
   color: #606060;
   font-family: "Roboto",sans-serif;
@@ -1142,7 +1151,7 @@ header.image-home:before{
 }
 
 .cta-banner{
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .cta-btn{
@@ -4588,6 +4597,10 @@ Styles for smaller devices
   .sec-team .row > [class^="col-"]:nth-last-child(1),
   .sec-team .row > [class^="col-"]:nth-last-child(2) {
     margin-bottom: 0;
+  }
+
+  .promise-last-element{
+    left:-26%;
   }
 
   .mobile_quote_form{
