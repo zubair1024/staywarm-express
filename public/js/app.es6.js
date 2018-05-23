@@ -20,8 +20,22 @@ $(document).ready(function () {
                 }
             }
         },
-        submitContactForm: function(){
-            
+        submitContactForm: function () {
+            $.ajax({
+                url: '/contact',
+                method: 'POST',
+                data: {
+                    name: '',
+                    email: '',
+                    message: ''
+                }
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
         },
         bannerQuote: function (size) {
             let firstName = $(`#banner_${size}_firstName`).val();

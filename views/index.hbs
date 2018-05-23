@@ -824,16 +824,16 @@
                 <div id="googleMap" class="google-maps"></div>
             </div>
             <div class="col-md-4 animate delay-a">
-                <form class="contact_form" action="#" method="post" enctype="multipart/form-data">
+                <form class="contact_form">
                     <h3>Leave a comment</h3>
                     <div class="form-group">
-                        <input name="uname" type="text" class="form-control uName" placeholder="Your name">
+                        <input id="form-uname" name="uname" type="text" class="form-control uName" placeholder="Your name">
                     </div>
                     <div class="form-group">
-                        <input name="uemail" type="email" class="form-control uEmail" placeholder="Your email">
+                        <input id="form-uemail" name="uemail" type="email" class="form-control uEmail" placeholder="Your email">
                     </div>
                     <div class="form-group">
-                        <textarea name="message" class="form-control msg" placeholder="Message"></textarea>
+                        <textarea id="form-message" name="message" class="form-control msg" placeholder="Message"></textarea>
                     </div>
                     <button onclick="App.submitContactForm()" id="contact-form-submit" type="submit">Send message
                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
