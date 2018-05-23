@@ -152,7 +152,6 @@ $(document).ready(function () {
                     'BookingSlot': '',
                 }
                 //change location for tracking
-                window.location.hash = "thankyou";
                 $.ajax({
                     url: 'https://api.247staywarm.co.uk/service1.asmx/CreateSalesFromService',
                     data: body,
@@ -162,6 +161,7 @@ $(document).ready(function () {
                     },
                     success: function (data) {
                         console.log(data);
+                        window.location.hash = "thankyou";
                         if ($('#thankyou').hasClass('hidden-item')) {
                             $('#thankyou').removeClass('hidden-item');
                         }
