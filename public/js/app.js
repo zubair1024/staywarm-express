@@ -11,7 +11,18 @@ $(document).ready(function () {
         'initListeners': function () {
             for (var e = $('.question'), s = 0; s < e.length; s++) this.questions.push($(e[s])), 0 != s && $(e[s]).addClass('hidden-item');
         },
-        'submitContactForm': function () {},
+        'submitContactForm': function () {
+            var e = $('form-uname').val(),
+                s = $('form-uemail').val(),
+                o = $('form-message').val();
+            $.post('/contact', {
+                'name': e,
+                'email': s,
+                'message': o
+            }).done(function (e) {
+                $('#contact-form-submit').prop('disabled', !0), alert('Thank you. We will get in touch with you shortly');
+            });
+        },
         'bannerQuote': function (e) {
             for (var s = $('#banner_' + e + '_firstName').val(), o = $('#banner_' + e + '_surName').val(), a = $('#banner_' + e + '_contactNumber').val(), i = $('#banner_' + e + '_email').val(), t = [], n = 0; n < 3; n++) $('#banner-error-' + e + '-' + n).hasClass('hidden-item') || $('#banner-error-' + e + '-' + n).addClass('hidden-item');
 
@@ -44,9 +55,8 @@ $(document).ready(function () {
                     'postcode': '',
                     'email': this.model.email,
                     'whatheating': this.model['What type of heating system do you have?'],
-                    'HowManyBathtubsAreInYourHome': this.model['How many bathtubs do you have'],
-                    'rooms': this.model['How many bedrooms do you have'],
-                    'brooms': this.model['How many bathrooms do you have'],
+                    'HowManyRadiatorsAreInYourHome': this.model['How many bedrooms do you have'],
+                    'HowManyBathtubsAreInYourHome': this.model['How many bathrooms do you have'],
                     'WouldYouLikeItRemoved': '',
                     'DoYouHaveAHotWaterCylinder': '',
                     'DoYouHaveSeperateColdWaterTank': '',
