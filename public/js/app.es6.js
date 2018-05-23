@@ -105,6 +105,8 @@ $(document).ready(function () {
 
                 //transform values
                 let body = {
+                    'twofoursevenref': 1,
+                    'teamid': 1,
                     'fname': this.model.firstName,
                     'sname': this.model.surName,
                     'tel': this.model.contactNumber,
