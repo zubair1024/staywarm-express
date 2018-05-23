@@ -145,8 +145,6 @@ $(document).ready(function () {
                     'DoYouWantBoilerMoved': '',
                     'WhereWouldYouLikeYourNewBoiler': '',
                     'WhereWillYourNewBoilerBeLocated': '',
-                    'HowManyRadiatorsAreInYourHome': '',
-                    'HowManyBathtubsAreInYourHome': '',
                     'HowManyStandaloneMixersShowers': '',
                     'DoYouHaveSeperateThermostatFromBoiler': '',
                     'DoYouHaveThermostatRadiator': '',
