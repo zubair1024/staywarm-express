@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const compression = require('compression');
+const nodemailer = require('nodemailer');
 const sitemap = require('express-sitemap-html')
 const routes = require('./routes/index');
 const app = express();
@@ -25,12 +26,12 @@ app.use('/', routes);
 
 
 global.transporter = nodemailer.createTransport({
-  host: 'smtp.ethereal.email',
-  port: 587,
-  secure: false, // true for 465, false for other ports
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // secure:true for port 465, secure:false for port 587
   auth: {
-      user: account.user, // generated ethereal user
-      pass: account.pass // generated ethereal password
+    user: 'razrlabtech@gmail.com',
+    pass: 'dangerDolanIsTheOne123'
   }
 });
 

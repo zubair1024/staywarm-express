@@ -20,6 +20,9 @@ $(document).ready(function () {
                 }
             }
         },
+        submitContactForm: function(){
+            
+        },
         bannerQuote: function (size) {
             let firstName = $(`#banner_${size}_firstName`).val();
             let surName = $(`#banner_${size}_surName`).val();
