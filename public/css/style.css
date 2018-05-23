@@ -3927,7 +3927,7 @@ Styles for smaller devices
   }
 
   .sec-features img {
-    /* display: none; */
+    display: none;
   }
 
   .sec-features p br {
