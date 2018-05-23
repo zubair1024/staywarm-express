@@ -24,20 +24,12 @@ $(document).ready(function () {
             let name = $('form-uname').val();
             let email = $('form-uemail').val();
             let message = $('form-message').val();
-            $.ajax({
-                url: '/contact',
-                method: 'POST',
-                data: {
-                    name: name,
-                    email: email,
-                    message: message
-                },
-                success: function (data) {
-                    console.log(data);
-                },
-                error: function (err) {
-                    console.log(err);
-                }
+            $.post("/contact", {
+                name: name,
+                email: email,
+                message: message
+            }).done(function (data) {
+                alert("Data Loaded: " + data);
             });
         },
         bannerQuote: function (size) {
