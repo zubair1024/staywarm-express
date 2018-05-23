@@ -24,10 +24,27 @@ router.post('/contact', function (req, res) {
   // setup email data with unicode symbols
     let mailOptions = {
         from: '"STAYWARM 👻" <foo@example.com>', // sender address
-        to: 'bar@example.com, baz@example.com', // list of receivers
-        subject: 'Hello ✔', // Subject line
-        text: 'Hello world?', // plain text body
-        html: '<b>Hello world?</b>' // html body
+        to: 'staywarm@247homerescue.co.uk, za@razrlab.com, jg@razrlab.com, ma@razrlab.com', // list of receivers
+        subject: 'StayWarm Contact ✔', // Subject line
+        text: `
+        
+        `, // plain text body
+        html: `
+        <table>
+        <tr>
+        <td>Name</td>
+        <td>TEST</td>
+        </tr>
+        <tr>
+        <td>Email Address</td>
+        <td>TEST</td>
+        </tr>
+        <tr>
+        <td>Message</td>
+        <td>TEST</td>
+        </tr>
+        </table>
+        ` // html body
     };
 
     // send mail with defined transport object

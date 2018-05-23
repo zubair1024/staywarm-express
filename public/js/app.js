@@ -11,6 +11,7 @@ $(document).ready(function () {
         'initListeners': function () {
             for (var e = $('.question'), s = 0; s < e.length; s++) this.questions.push($(e[s])), 0 != s && $(e[s]).addClass('hidden-item');
         },
+        'submitContactForm': function () {},
         'bannerQuote': function (e) {
             for (var s = $('#banner_' + e + '_firstName').val(), o = $('#banner_' + e + '_surName').val(), a = $('#banner_' + e + '_contactNumber').val(), i = $('#banner_' + e + '_email').val(), t = [], n = 0; n < 3; n++) $('#banner-error-' + e + '-' + n).hasClass('hidden-item') || $('#banner-error-' + e + '-' + n).addClass('hidden-item');
 
@@ -45,6 +46,7 @@ $(document).ready(function () {
                     'whatheating': this.model['What type of heating system do you have?'],
                     'HowManyBathtubsAreInYourHome': this.model['How many bathtubs do you have'],
                     'rooms': this.model['How many bedrooms do you have'],
+                    'brooms': this.model['How many bathrooms do you have'],
                     'WouldYouLikeItRemoved': '',
                     'DoYouHaveAHotWaterCylinder': '',
                     'DoYouHaveSeperateColdWaterTank': '',
