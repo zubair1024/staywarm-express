@@ -23,7 +23,7 @@ router.get('/robots.txt', function (req, res) {
 router.post('/contact', function (req, res) {
   // setup email data with unicode symbols
     let mailOptions = {
-        from: '"Fred Foo 👻" <foo@example.com>', // sender address
+        from: '"STAYWARM 👻" <foo@example.com>', // sender address
         to: 'bar@example.com, baz@example.com', // list of receivers
         subject: 'Hello ✔', // Subject line
         text: 'Hello world?', // plain text body
