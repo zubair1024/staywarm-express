@@ -21,6 +21,10 @@ $(document).ready(function () {
             }
         },
         submitContactForm: function () {
+            gtag('event', 'contact_form_submitted', {
+                'event_category': 'Get A Quote',
+                'event_label': 'engagement'
+            });
             let name = $('form-uname').val();
             let email = $('form-uemail').val();
             let message = $('form-message').val();
@@ -34,6 +38,10 @@ $(document).ready(function () {
             });
         },
         bannerQuote: function (size) {
+            gtag('event', 'banner_quote_form_submitted', {
+                'event_category': 'Get A Quote',
+                'event_label': 'engagement'
+            });
             let firstName = $(`#banner_${size}_firstName`).val();
             let surName = $(`#banner_${size}_surName`).val();
             let contactNumber = $(`#banner_${size}_contactNumber`).val();
@@ -80,6 +88,10 @@ $(document).ready(function () {
 
         },
         mainQuote() {
+            gtag('event', 'main_quote_form_submitted', {
+                'event_category': 'Get A Quote',
+                'event_label': 'engagement'
+            });
             let firstName = $('#main_firstName').val();
             let surName = $('#main_surName').val();
             let contactNumber = $('#main_contactNumber').val();
@@ -172,6 +184,10 @@ $(document).ready(function () {
                     },
                     success: function (data) {
                         console.log(data);
+                        gtag('event', 'main_quote_form_completed', {
+                            'event_category': 'Get A Quote',
+                            'event_label': 'engagement'
+                        });
                         window.location.hash = "thankyou";
                         if ($('#thankyou').hasClass('hidden-item')) {
                             $('#thankyou').removeClass('hidden-item');
