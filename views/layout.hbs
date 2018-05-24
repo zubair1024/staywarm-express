@@ -27,9 +27,13 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-117756222-1');
-    setTimeout(function(){
-      ga('send','event','Profitable Engagement','time on page more than 10 seconds')
-    },10000);
+    setTimeout(function () {
+      gtag('event', 'Time on page more than 10 seconds', {
+        'event_category': 'Engagement',
+        'event_label': 'Profitable Engagement'
+      });
+      console.log('Profitable Engagement Event Triggered');
+    }, 10000);
 
   </script>
   <!-- Hotjar Tracking Code for https://247staywarm.co.uk/ -->
@@ -78,11 +82,12 @@
   <!-- End of ClickDesk -->
   <script type="text/javascript" data-cfasync="false">
     (function (W, i, s, e, P, o, p) {
-    W['WisePopsObject'] = P; W[P] = W[P] || function () {
-      (W[P].q = W[P].q || []).push(arguments)
-    }, W[P].l = 1 * new Date(); o = i.createElement(s),
-      p = i.getElementsByTagName(s)[0]; o.async = 1; o.src = e; p.parentNode.insertBefore(o, p)
+      W['WisePopsObject'] = P; W[P] = W[P] || function () {
+        (W[P].q = W[P].q || []).push(arguments)
+      }, W[P].l = 1 * new Date(); o = i.createElement(s),
+        p = i.getElementsByTagName(s)[0]; o.async = 1; o.src = e; p.parentNode.insertBefore(o, p)
     })(window, document, 'script', '//loader.wisepops.com/get-loader.js?v=1&site=SCfNXJi6Gc', 'wisepops');
   </script>
 </body>
+
 </html>
