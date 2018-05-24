@@ -27,7 +27,9 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-117756222-1');
-    setTimeout(ga('send','event','Profitable Engagement','time on page more than 10 seconds'),10000);
+    setTimeout(function(){
+      ga('send','event','Profitable Engagement','time on page more than 10 seconds')
+    },10000);
 
   </script>
   <!-- Hotjar Tracking Code for https://247staywarm.co.uk/ -->
