@@ -19,6 +19,13 @@ $(document).ready(function () {
                     $(questions[i]).addClass('hidden-item');
                 }
             }
+            //video playback
+            $('.youtube-popup').on('click',()=>{
+                gtag('event', 'video_playback_started', {
+                    'event_category': 'Video Enagagement',
+                    'event_label': 'engagement'
+                });
+            });
         },
         submitContactForm: function () {
             gtag('event', 'contact_form_submitted', {
