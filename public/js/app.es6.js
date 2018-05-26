@@ -184,14 +184,20 @@ $(document).ready(function () {
                     },
                     success: function (data) {
                         console.log(data);
+                        //send GA event
                         gtag('event', 'main_quote_form_completed', {
                             'event_category': 'Get A Quote',
                             'event_label': 'engagement'
                         });
+                        //record as adwords conversion
+                        gtag_report_conversion();
+                        //change the fragment
                         window.location.hash = "thankyou";
+                        //render thank you text
                         if ($('#thankyou').hasClass('hidden-item')) {
                             $('#thankyou').removeClass('hidden-item');
                         }
+                        //scroll to thank you message
                         $("html, body").animate({ scrollTop: $($('#questions')).offset().top - 80 + "px" }, 1600, "swing");
                     },
                     error: function (err) {

@@ -27,6 +27,7 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-117756222-1');
+    gtag('config', 'AW-964144293');
     setTimeout(function () {
       gtag('event', 'Time on page more than 10 seconds', {
         'event_category': 'Engagement',
@@ -36,6 +37,21 @@
     }, 10000);
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics end -->
+  <!-- Event snippet for StayWarm Sign Up conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-964144293/BD2-CLOgoYMBEKXZ3ssD',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <!-- Hotjar Tracking Code for https://247staywarm.co.uk/ -->
   <script>
     (function (h, o, t, j, a, r) {
@@ -91,6 +107,7 @@
   </script>
   <!-- WisePop end -->
   <!-- Google Code for Thank you page Conversion Page -->
+  {{!--
   <script type="text/javascript">
     /* <![CDATA[ */
     var google_conversion_id = 964144293;
@@ -105,7 +122,7 @@
       <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/964144293/?label=uHh_CNO6iIMBEKXZ3ssD&amp;guid=ON&amp;script=0"
       />
     </div>
-  </noscript>
+  </noscript> --}}
   <!-- Google Code for Thank you page Conversion Page End-->
 </body>
 
