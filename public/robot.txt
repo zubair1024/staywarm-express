@@ -1,0 +1,2 @@
+Sitemap: https://247staywarmco.uk/sitemap.xml
+User-agent: *

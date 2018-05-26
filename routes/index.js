@@ -22,10 +22,10 @@ router.get('/.well-known/acme-challenge/9zRYklBj-oWbC0v-fr_DGtmJ9gZJJECwZujRoEZf
 
 
 //robot.txt file handling
-router.get('/robots.txt', function (req, res) {
-  res.type('text/plain');
-  res.send(`Sitemap: https://247staywarmco.uk/sitemap\nUser-agent: *\n`);
-});
+// router.get('/robots.txt', function (req, res) {
+//   res.type('text/plain');
+//   res.send(`Sitemap: https://247staywarmco.uk/sitemap\nUser-agent: *\n`);
+// });
 
 router.post('/contact', function (req, res) {
   // setup email data with unicode symbols
