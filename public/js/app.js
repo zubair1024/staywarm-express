@@ -10,6 +10,13 @@ $(document).ready(function () {
         },
         'initListeners': function () {
             for (var e = $('.question'), t = 0; t < e.length; t++) this.questions.push($(e[t])), 0 != t && $(e[t]).addClass('hidden-item');
+
+            $('.youtube-popup').on('click', function () {
+                console.log('video_playback_started'), gtag('event', 'video_playback_started', {
+                    'event_category': 'Video Enagagement',
+                    'event_label': 'engagement'
+                });
+            });
         },
         'submitContactForm': function () {
             gtag('event', 'contact_form_submitted', {
@@ -169,6 +176,8 @@ $(document).ready(function () {
         }
     }, App.init();
 });
+
+//video playback
 
 //hide all error messages
 
