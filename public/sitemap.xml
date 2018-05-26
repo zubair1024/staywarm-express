@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url> 
+    <loc>http://247staywarm.co.uk/</loc> 
+    <image:image>
+       <image:loc>http://247staywarm.co.uk/img/nav/247-home-rescue-logo.png</image:loc>
+       <image:caption>24|7 StayWarm</image:caption>
+    </image:image>
+  </url>
+</urlset>
