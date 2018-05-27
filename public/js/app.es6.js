@@ -24,7 +24,7 @@ $(document).ready(function () {
                 console.log('video_playback_started');
                 gtag('event', 'video_playback_started', {
                     'event_category': 'Video Enagagement',
-                    'event_label': 'engagement'
+                    'event_label': 'video engagement'
                 });
             });
         },
