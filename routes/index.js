@@ -15,6 +15,13 @@ router.get('/dev', (req, res) => {
 });
 
 
+router.get('/thankyou', (req, res) => {
+  res.render('thankyou', {
+    layout: 'layout'
+  });
+});
+
+
 router.get('/.well-known/acme-challenge/9zRYklBj-oWbC0v-fr_DGtmJ9gZJJECwZujRoEZfWD4', (req, res) => {
   res.type('text/plain');
   res.send('9zRYklBj-oWbC0v-fr_DGtmJ9gZJJECwZujRoEZfWD4.Nj7TUfeTu7aF_1fjMIf9VRf3b6xIuzJ9QBPH-oG_O0E');

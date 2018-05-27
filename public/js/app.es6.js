@@ -198,7 +198,7 @@ $(document).ready(function () {
                             'event_label': 'engagement'
                         });
                         //record as adwords conversion
-                        gtag_report_conversion();
+                        gtag_report_conversion('https://247staywarm.co.uk/#thankyou');
                         //change the fragment
                         window.location.hash = "thankyou";
                         //render thank you text

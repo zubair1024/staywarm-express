@@ -116,7 +116,7 @@ $(document).ready(function () {
                         console.log(e), gtag('event', 'main_quote_form_completed', {
                             'event_category': 'Get A Quote',
                             'event_label': 'engagement'
-                        }), gtag_report_conversion(), window.location.hash = 'thankyou', $('#thankyou').hasClass('hidden-item') && $('#thankyou').removeClass('hidden-item'), $('html, body').animate({
+                        }), gtag_report_conversion('https://247staywarm.co.uk/#thankyou'), window.location.hash = 'thankyou', $('#thankyou').hasClass('hidden-item') && $('#thankyou').removeClass('hidden-item'), $('html, body').animate({
                             'scrollTop': $($('#questions')).offset().top - 80 + 'px'
                         }, 1600, 'swing');
                     },
