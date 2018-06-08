@@ -21,7 +21,7 @@ router.get('/thankyou', (req, res) => {
   });
 });
 
-router.get('/faq', (req, res) => {
+router.get('/faqs', (req, res) => {
   res.render('index', {
     layout: 'layout'
   });
