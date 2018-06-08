@@ -71,6 +71,13 @@
         }, {offset: '80%'});
     }
 
+    if ($('#faqs .animate').length > 0) {
+        $('#faqs .animate').waypoint(function () {
+            $('#faqs img.animate').addClass('fadeInRightBig');
+            $('#faqs .panel.animate').addClass('fadeInLeft');
+        }, {offset: '80%'});
+    }
+
     if ($('#blog .animate').length > 0) {
         $('#blog .animate').waypoint(function () {
             $('#blog .animate').addClass('fadeInUp');
