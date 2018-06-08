@@ -21,6 +21,12 @@ router.get('/thankyou', (req, res) => {
   });
 });
 
+router.get('/faq', (req, res) => {
+  res.render('index', {
+    layout: 'layout'
+  });
+});
+
 
 router.get('/.well-known/acme-challenge/9zRYklBj-oWbC0v-fr_DGtmJ9gZJJECwZujRoEZfWD4', (req, res) => {
   res.type('text/plain');
