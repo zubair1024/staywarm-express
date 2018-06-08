@@ -2226,6 +2226,12 @@ FAQ
   width: 560px;
 }
 
+.faq-section-panels {
+  width: 100% !important;
+}
+
+
+
 .sec-faq .row .faq-inner .panel-group .panel + .panel {
   margin-top: 20px;
 }
