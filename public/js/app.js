@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function () {
   window.App = {
     "model": {},
@@ -40,11 +42,11 @@ $(document).ready(function () {
         "event_label": "engagement"
       });
 
-      for (var t = $("#banner_" + e + "_firstName").val(), a = $("#banner_" + e + "_surName").val(), o = $("#banner_" + e + "_contactNumber").val(), n = $("#banner_" + e + "_email").val(), s = [], i = 0; i < 3; i++) $("#banner-error-" + e + "-" + i).hasClass("hidden-item") || $("#banner-error-" + e + "-" + i).addClass("hidden-item");
+      for (var t = $("#banner_" + e + "_firstName").val(), a = $("#banner_" + e + "_surName").val(), o = $("#banner_" + e + "_contactNumber").val(), s = $("#banner_" + e + "_email").val(), n = [], i = 0; i < 3; i++) $("#banner-error-" + e + "-" + i).hasClass("hidden-item") || $("#banner-error-" + e + "-" + i).addClass("hidden-item");
 
-      "" == t && s.push(0), "" == a && s.push(1), "" === o && s.push(2), "" !== n && n.indexOf("@") > -1 || s.push(3), 0 === s.length ? (this.model.firstName = t, this.model.surName = a, this.model.contactNumber = o, this.model.email = n, $("#banner_" + e + "_firstName").prop("disabled", !0), $("#banner_" + e + "_surName").prop("disabled", !0), $("#banner_" + e + "_contactNumber").prop("disabled", !0), $("#banner_" + e + "_email").prop("disabled", !0), $("#banner-btn-" + e).addClass("disabled"), $("html, body").animate({
+      "" == t && n.push(0), "" == a && n.push(1), "" === o && n.push(2), "" !== s && s.indexOf("@") > -1 || n.push(3), 0 === n.length ? (this.model.firstName = t, this.model.surName = a, this.model.contactNumber = o, this.model.email = s, $("#banner_" + e + "_firstName").prop("disabled", !0), $("#banner_" + e + "_surName").prop("disabled", !0), $("#banner_" + e + "_contactNumber").prop("disabled", !0), $("#banner_" + e + "_email").prop("disabled", !0), $("#banner-btn-" + e).addClass("disabled"), $("html, body").animate({
         "scrollTop": $($("#questions")).offset().top - 80 + "px"
-      }, 700, "swing")) : s.forEach(function (t) {
+      }, 700, "swing")) : n.forEach(function (t) {
         $("#banner-error-" + e + "-" + t).hasClass("hidden-item") && $("#banner-error-" + e + "-" + t).removeClass("hidden-item");
       });
     },
@@ -54,12 +56,12 @@ $(document).ready(function () {
         "event_label": "engagement"
       });
 
-      for (var e = $("#main_firstName").val(), t = $("#main_surName").val(), a = $("#main_contactNumber").val(), o = $("#main_email").val(), n = [], s = 0; s < 3; s++) $("#main-error-" + s).hasClass("hidden-item") || $("#main-error-" + s).addClass("hidden-item");
+      for (var e = $("#main_firstName").val(), t = $("#main_surName").val(), a = $("#main_contactNumber").val(), o = $("#main_email").val(), s = [], n = 0; n < 3; n++) $("#main-error-" + n).hasClass("hidden-item") || $("#main-error-" + n).addClass("hidden-item");
 
-      if (("" == e && n.push(0), "" == t && n.push(1), "" === a && n.push(2), "" !== o && o.indexOf("@") > -1 || n.push(3), 0 === n.length)) {
+      if (("" == e && s.push(0), "" == t && s.push(1), "" === a && s.push(2), "" !== o && o.indexOf("@") > -1 || s.push(3), 0 === s.length)) {
         this.model.firstName = e, this.model.surName = t, this.model.contactNumber = a, this.model.email = o;
 
-        for (var s = 0; s <= this.questions.length; s++) this.questions[s] && !this.questions[s].hasClass("hidden-item") && this.questions[s].addClass("hidden-item");
+        for (var n = 0; n <= this.questions.length; n++) this.questions[n] && !this.questions[n].hasClass("hidden-item") && this.questions[n].addClass("hidden-item");
 
         wisepops("goal", "signedup");
         var i = {
@@ -126,7 +128,7 @@ $(document).ready(function () {
             }, 1600, "swing");
           }
         });
-      } else n.forEach(function (e) {
+      } else s.forEach(function (e) {
         $("#main-error-" + e).hasClass("hidden-item") && $("#main-error-" + e).removeClass("hidden-item");
       });
     },
@@ -135,11 +137,11 @@ $(document).ready(function () {
         "scrollTop": $($(o)).offset().top - 200 + "px"
       }, 700, "swing");
 
-      for (var n = e; n <= this.questions.length; n++) {
-        n != e && this.questions[n] && !this.questions[n].hasClass("hidden-item") && this.questions[n].addClass("hidden-item");
+      for (var s = e; s <= this.questions.length; s++) {
+        s != e && this.questions[s] && !this.questions[s].hasClass("hidden-item") && this.questions[s].addClass("hidden-item");
 
-        for (var s = $(this.questions[n]).children(), i = 0; i < s.length; i++) {
-          var r = $(s[i]).find("img");
+        for (var n = $(this.questions[s]).children(), i = 0; i < n.length; i++) {
+          var r = $(n[i]).find("img");
           r.hasClass("active") && r.removeClass("active");
         }
       }
