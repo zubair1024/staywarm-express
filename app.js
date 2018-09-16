@@ -10,6 +10,22 @@ const sitemap = require('express-sitemap-html')
 const routes = require('./routes/index');
 const app = express();
 
+/**
+ * Global uncaughtException handler
+ */
+process.on("uncaughtException", function(error) {
+  if (error && error.stack) {
+    console.error(`uncaughtException:${error.stack}`);
+  } else {
+    console.error(`uncaughtException:${error}`);
+  }
+});
+
+process.on("unhandledRejection", function(reason, p) {
+  console.error("unhandledRejection:");
+  console.error(reason);
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
