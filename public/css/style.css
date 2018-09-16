@@ -917,7 +917,10 @@ End Steps
 /*========== Start slider-area css===========*/
 
 .image-home{
-    background: url(../img/slider-img/1.jpg) no-repeat scroll center 0;
+    /* background-image: url(../img/slider-img/Staywarm_Banner_v2.jpg) no-repeat scroll center 0; */
+    /* background-image: url(http://res.cloudinary.com/dibkwkkot/image/upload/v1537084396/Staywarm_banner_big_v3_without_background.png);
+    background: linear-gradient(0deg,#fdd6c4,#f7937b 66%,#fb6058);; */
+    background:  #f7937b url("http://res.cloudinary.com/dibkwkkot/image/upload/v1537091493/Staywarm_banner_big_v5_without_background.png") no-repeat right top;
     background-size: cover;
 }
 .image-home .col-header-txt a{
@@ -1039,7 +1042,7 @@ header.image-home:before{
 }
 .cb-slideshow li.pic-1{
     opacity: 1;
-    background: url(../img/slider-img/1.jpg);
+    background: url(../img/slider-img/Staywarm_Banner_v2.jpg);
 }
 .cb-slideshow li.pic-2{
     background: url(../img/slider-img/2.jpg);
@@ -1054,9 +1057,37 @@ header.image-home:before{
     animation-delay: 18s;
 }
 
+.quote-text{
+  font-size: 1.2em;
+  list-style: none;
+  line-height: 2em;
+  margin-top: -1.5em;
+  padding: 0px;
+}
+
+/* @media (min-width: 992px){
+  .quote-text{
+    font-size: 1.3em;
+    list-style: none;
+    line-height: 2em;
+    margin-top: -1.5em;
+    padding: 0px;
+  }
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .quote-text{
+    font-size: 1em;
+    list-style: none;
+    line-height: 2em;
+    margin-top: -1.5em;
+    padding: 0px;
+  }
+  
+} */
+
 .slider-caption .col-header-txt{
     text-align: left;
-    padding-top: 325px;
+    padding-top: 157px;
     z-index: 1;
 }
 .slider-caption .col-header-txt h1{
@@ -2882,7 +2913,7 @@ Contact
 @media (min-width: 768px){
   .col-header-quote {
     width: 32.666667%;
-    right: -70px;
+    right: -160px;
   }
 }
 
