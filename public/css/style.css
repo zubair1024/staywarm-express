@@ -216,6 +216,8 @@ nav .btn-getnow {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   margin-right: 15px;
+  background-color: white;
+  color: #ff0000;
 }
 
 nav .btn-getnow:focus {
@@ -225,7 +227,8 @@ nav .btn-getnow:focus {
 }
 
 nav .btn-getnow:hover {
-  background-color: white;
+  background-color: #ff4b41;
+  color: white !important;
   color: #725ce6;
 }
 
@@ -916,10 +919,9 @@ End Steps
 .image-home {
   /* background-image: url(../img/slider-img/Staywarm_Banner_v2.jpg) no-repeat scroll center 0; */
   /* background-image: url(https://res.cloudinary.com/dibkwkkot/image/upload/v1537105153/Staywarm_banner_big_v8_without_background.png) right top; */
-  background:
-    url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537105153/Staywarm_banner_big_v8_without_background.png")
+  background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537188465/Staywarm_banner_big_v9.png")
     no-repeat right top;
-    background-color: #000;
+  background-color: #000;
   background-size: cover;
 }
 .image-home .col-header-txt a {
@@ -994,6 +996,8 @@ header.image-home:before {
 }
 .slider-area .fade {
   opacity: 1;
+  height: 115%;
+  background: rgba(0, 0, 0, 0.3);
 }
 .cb-slideshow {
   position: absolute;
@@ -1058,6 +1062,7 @@ header.image-home:before {
 
 .quote-text {
   font-size: 1.2em;
+  color: #000000;
   list-style: none;
   line-height: 2em;
   letter-spacing: 0.05em;
@@ -1115,13 +1120,15 @@ header.image-home:before {
 .slider-caption .col-header-txt a.btn-white:hover,
 a.submit-btn:hover {
   background-color: transparent;
-  color: white;
+  color: #ff4b41;
 }
 .slider-caption .col-header-txt a.btn-white,
 a.submit-btn {
-  color: #4c4b4b;
-  background-color: white;
-  border-color: white;
+  color: #ffffff;
+  /* background-color: white;
+  border-color: white; */
+  background-color: red;
+  border-color: red;
   display: block;
   cursor: pointer;
   margin-left: auto;
@@ -1139,7 +1146,7 @@ a.submit-btn {
 }
 .slider-caption .col-header-txt a.btn-white:hover,
 a.submit-btn:hover {
-  color: #fff;
+  color: #ff4b41;
 }
 .slider-caption .col-header-img {
   position: relative;
@@ -2826,7 +2833,8 @@ Contact
 .sec-contact form,
 .quote_form {
   height: 100%;
-  background-color: rgba(255, 75, 65, 0.8196078431372549);
+  /* background-color: rgba(255, 75, 65, 0.8196078431372549); */
+  background-color: #fffffff2;
   -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
@@ -2851,7 +2859,7 @@ Contact
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  color: white;
+  color: black;
   height: 40px;
 }
 
@@ -2859,7 +2867,7 @@ Contact
 .sec-contact form .form-group textarea::placeholder,
 .quote_form .form-group input::placeholder,
 .quote_form .form-group textarea::placeholder {
-  color: white;
+  color: black;
   opacity: 0.5;
 }
 
@@ -2872,7 +2880,7 @@ Contact
   .form-group
   input::-webkit-input-placeholder,
 .quote_form .form-group textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.25);
+  color: black;
 }
 
 .sec-contact form .form-group input::-moz-placeholder,
@@ -4618,9 +4626,9 @@ Styles for smaller devices
     min-height: 600px;
   }
 
-  .slider-caption{
-    background: rgba(0,0,0, 0.5);
-    margin-bottom: -8%
+  .slider-caption {
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: -8%;
   }
 }
 
@@ -5053,3 +5061,58 @@ body.swal2-shown {
     background: rgba(0,0,0, 0.5);
 } */
 
+.sec-contact form .form-group input::placeholder,
+.sec-contact form .form-group textarea::placeholder,
+.quote_form.mobile_quote_form .form-group input::placeholder,
+.quote_form.mobile_quote_form .form-group textarea::placeholder {
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.sec-contact form .form-group input::placeholder,
+.sec-contact form .form-group textarea::placeholder,
+.quote_form.mobile_quote_form .form-group input::placeholder,
+.quote_form.mobile_quote_form .form-group textarea::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.sec-contact form .form-group input::-webkit-input-placeholder,
+.sec-contact
+  form
+  .form-group
+  textarea::-webkit-input-placeholder
+  .quote_form.mobile_quote_form
+  .form-group
+  input::-webkit-input-placeholder,
+.quote_form.mobile_quote_form .form-group textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.quote-text-mobile {
+  color: #fff;
+}
+
+.sec-contact form .form-group input,
+.sec-contact form .form-group textarea,
+.quote_form.mobile_quote_form .form-group input,
+.quote_form.mobile_quote_form .form-group textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  height: 40px;
+}
+
+.sec-contact form .form-group input,
+.sec-contact form .form-group textarea,
+.quote_form.mobile_quote_form .form-group input,
+.quote_form.mobile_quote_form .form-group textarea {
+
+  color: white !important;
+}
