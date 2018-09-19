@@ -919,7 +919,9 @@ End Steps
 .image-home {
   /* background-image: url(../img/slider-img/Staywarm_Banner_v2.jpg) no-repeat scroll center 0; */
   /* background-image: url(https://res.cloudinary.com/dibkwkkot/image/upload/v1537105153/Staywarm_banner_big_v8_without_background.png) right top; */
-  background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537188465/Staywarm_banner_big_v9.png")
+  /* background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537375584/Staywarm_banner_big_v9-smal.png") */
+  /* background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537379196/Staywarm_banner_big_v11.png") */
+  background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537384639/Staywarm_banner_big_v13.png")
     no-repeat right top;
   background-color: #000;
   background-size: cover;
@@ -997,7 +999,7 @@ header.image-home:before {
 .slider-area .fade {
   opacity: 1;
   height: 115%;
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.3); */
 }
 .cb-slideshow {
   position: absolute;
@@ -1062,7 +1064,7 @@ header.image-home:before {
 
 .quote-text {
   font-size: 1.2em;
-  color: #000000;
+  color: #ffffff;
   list-style: none;
   line-height: 2em;
   letter-spacing: 0.05em;
@@ -2834,7 +2836,7 @@ Contact
 .quote_form {
   height: 100%;
   /* background-color: rgba(255, 75, 65, 0.8196078431372549); */
-  background-color: #fffffff2;
+  background-color: #ffffffc9;
   -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
@@ -2859,7 +2861,7 @@ Contact
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  color: black;
+  color: #1b1b1b;
   height: 40px;
 }
 
@@ -2867,7 +2869,7 @@ Contact
 .sec-contact form .form-group textarea::placeholder,
 .quote_form .form-group input::placeholder,
 .quote_form .form-group textarea::placeholder {
-  color: black;
+  color: #1b1b1b;
   opacity: 0.5;
 }
 
@@ -2880,7 +2882,7 @@ Contact
   .form-group
   input::-webkit-input-placeholder,
 .quote_form .form-group textarea::-webkit-input-placeholder {
-  color: black;
+  color: #1b1b1b
 }
 
 .sec-contact form .form-group input::-moz-placeholder,
@@ -2893,7 +2895,7 @@ Contact
   .form-group
   input::-moz-placeholder,
 .quote_form form .form-group textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.25);
+  color: #1b1b1b
 }
 
 .sec-contact form .form-group input:-ms-input-placeholder,
@@ -2905,7 +2907,7 @@ Contact
   .form-group
   input:-ms-input-placeholder,
 .quote_form .form-group textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.25);
+  color: #1b1b1b
 }
 
 .sec-contact form .form-group input:-moz-placeholder,
@@ -2917,7 +2919,7 @@ Contact
   .form-group
   input:-moz-placeholder,
 .quote_form .form-group textarea:-moz-placeholder {
-  color: rgba(255, 255, 255, 0.25);
+  color: #1b1b1b
 }
 
 .sec-contact form .form-group textarea,
@@ -2967,14 +2969,14 @@ Contact
 @media (min-width: 1700px) {
   .col-header-quote {
     width: 32.666667%;
-    right: -350px;
+    right: -150px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1700px) {
   .col-header-quote {
     width: 32.666667%;
-    right: -250px;
+    right: -100px;
   }
 }
 
@@ -5116,3 +5118,22 @@ body.swal2-shown {
 
   color: white !important;
 }
+
+/* Blurry background image */
+
+.page-bg {
+  background: transparent;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Blurry background image end */
