@@ -2882,7 +2882,7 @@ Contact
   .form-group
   input::-webkit-input-placeholder,
 .quote_form .form-group textarea::-webkit-input-placeholder {
-  color: #1b1b1b
+  color: #1b1b1b;
 }
 
 .sec-contact form .form-group input::-moz-placeholder,
@@ -2895,7 +2895,7 @@ Contact
   .form-group
   input::-moz-placeholder,
 .quote_form form .form-group textarea::-moz-placeholder {
-  color: #1b1b1b
+  color: #1b1b1b;
 }
 
 .sec-contact form .form-group input:-ms-input-placeholder,
@@ -2907,7 +2907,7 @@ Contact
   .form-group
   input:-ms-input-placeholder,
 .quote_form .form-group textarea:-ms-input-placeholder {
-  color: #1b1b1b
+  color: #1b1b1b;
 }
 
 .sec-contact form .form-group input:-moz-placeholder,
@@ -2919,7 +2919,7 @@ Contact
   .form-group
   input:-moz-placeholder,
 .quote_form .form-group textarea:-moz-placeholder {
-  color: #1b1b1b
+  color: #1b1b1b;
 }
 
 .sec-contact form .form-group textarea,
@@ -5115,26 +5115,23 @@ body.swal2-shown {
 .sec-contact form .form-group textarea,
 .quote_form.mobile_quote_form .form-group input,
 .quote_form.mobile_quote_form .form-group textarea {
-
   color: white !important;
 }
 
-.bottom-text-container{
+.bottom-text-container {
   position: relative;
   bottom: -27rem;
   text-align: center;
   margin-bottom: 3rem;
-  margin: auto
+  margin: auto;
 }
 
-.bottom-text-container div{
+.bottom-text-container div {
   font-size: 2em;
   text-align: center;
 }
 
-.bottom-text-image{
-  padding:0;text-align: center;
+.bottom-text-content {
+  padding: 0;
+  text-align: center;
 }
-
-
-
