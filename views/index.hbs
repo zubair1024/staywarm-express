@@ -107,9 +107,9 @@
                             <p style="font-size: 26px;">New-Boiler &amp; Deluxe Plan starting from <span>£ 599</span></p>
                             <div class="hidden-sm-down">
                                 <!-- TrustBox widget - Mini -->
-                                <div class="trustpilot-container-box trustpilot-widget" data-locale="en-US" data-template-id="53aa8807dec7e10d38f59f32"
-                                    data-businessunit-id="5304d93900006400057840a9" data-style-height="150px"
-                                    data-style-width="100%" data-theme="dark">
+                                <div class="trustpilot-container-box trustpilot-widget" data-locale="en-US"
+                                    data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="5304d93900006400057840a9"
+                                    data-style-height="150px" data-style-width="100%" data-theme="dark">
                                     <a href="https://www.trustpilot.com/review/247homerescue.co.uk" target="_blank">Trustpilot</a>
                                 </div>
                                 <!-- End TrustBox widget -->
@@ -185,45 +185,66 @@
         Customers</li>
     </div>
 </div>
-<div class="bottom-text-container hidden-md-up">
-    <div class="animated-words" style="position: relative; width: 100%;    left: -7em;top: -1.2em;">
-        <span>
-            <div class="col-sm-12 bottom-text-content">
-                <img src="./img/icons/check.png" style="height: 1em;">
-               One Fixed Price
+<div class="mobile-bottom-text-container hidden-md-up">
+    <div id="text-carousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="row">
+            <div class="col-xs-offset-3 col-xs-6">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="carousel-content">
+                            <div>
+                                {{!-- <img src="./img/icons/check.png" style="height: 1em;"> --}}
+                                One Fixed Price
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-content">
+                            <div>
+                                {{!-- <img src="./img/icons/check.png" style="height: 1em;"> --}}
+                                7 Years Warranty
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-content">
+                            <div>
+                                {{!-- <img src="./img/icons/check.png" style="height: 1em;"> --}}
+                                National Coverage
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="carousel-content">
+                            <div>
+                                {{!-- <img src="./img/icons/check.png" style="height: 1em;"> --}}
+                                Gas Safe Approved
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="carousel-content">
+                            <div>
+                                {{!-- <img src="./img/icons/check.png" style="height: 1em;"> --}}
+                                10,000+ <img src="https://image.flaticon.com/icons/svg/576/576790.svg" style="height: 20px">
+                                Customers</li>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </span>
-        <span>
-            <div class="col-sm-12 bottom-text-content">
-                <img src="./img/icons/check.png" style="height: 1em;">
-                7 Years Warranty
-            </div>
-        </span>
-        <span>
-            <div class="col-sm-12 bottom-text-content">
-                <img src="./img/icons/check.png" style="height: 1em;">
-                Next Day Installation
-            </div>
-        </span>
-        <span>
-            <div class="col-sm-12 bottom-text-content">
-                <img src="./img/icons/check.png" style="height: 1em;">
-                National Coverage
-            </div>
-        </span>
-        <span>
-            <div class="col-sm-12 bottom-text-content">
-                <img src="./img/icons/check.png" style="height: 1em;">
-                Gas Safe Approved
-            </div>
-        </span>
-        <span>
-            <div class="col-sm-12 bottom-text-content">
-                <img src="./img/icons/check.png" style="height: 1em;">
-                10,000+ <img src="https://image.flaticon.com/icons/svg/576/576790.svg" style="height: 20px">
-                Customers</li>
-            </div>
-        </span>
+        </div>
+        <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#text-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
     </div>
 </div>
 <!--End slider area-->
@@ -237,7 +258,6 @@
             <a href="https://www.trustpilot.com/review/247homerescue.co.uk" target="_blank">Trustpilot</a>
         </div>
         <!-- End TrustBox widget -->
-
         <div class="form-group">
             <input id="banner_sm_firstName" name="banner_sm_firstName" type="text" class="form-control uName"
                 placeholder="Name">
@@ -258,15 +278,6 @@
         </div>
         <a onclick="App.bannerQuote('sm')" id="banner-btn-sm" class="cta-btn cat-light">Get a Quote
         </a>
-        <ul class="quote-text quote-text-mobile" style="font-size: 2rem; text-align: left; padding-top: 3em;">
-            <li><img src="./img/icons/check.png" style="height: 20px"> One fixed price</li>
-            <li><img src="./img/icons/check.png" style="height: 20px"> 7 years warranty</li>
-            <li><img src="./img/icons/check.png" style="height: 20px"> Next day installation</li>
-            <li><img src="./img/icons/check.png" style="height: 20px"> Gas safe approved</li>
-            <li><img src="./img/icons/check.png" style="height: 20px"> National coverage</li>
-            <li><img src="./img/icons/check.png" style="height: 20px"> 10,000+ <img src="https://image.flaticon.com/icons/svg/576/576790.svg"
-                    style="height: 20px"> customers</li>
-        </ul>
     </form>
 </div>
 <!-- Mobile Quote Form End -->

@@ -923,7 +923,7 @@ End Steps
   /* background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537379196/Staywarm_banner_big_v11.png") */
   /* background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537384639/Staywarm_banner_big_v13.png") */
   background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537467601/Staywarm_banner_big_v13_2.png")
-    no-repeat right top;
+    no-repeat center top;
   background-color: #000;
   background-size: cover;
 }
@@ -5119,18 +5119,21 @@ body.swal2-shown {
   color: white !important;
 }
 
-.bottom-text-container {
+.bottom-text-container,.mobile-bottom-text-container {
   text-align: center;
   margin: auto;
   padding: 3px 0;
-  background-image: -moz-linear-gradient(90deg, #c5281d 0%, #ff4b41 100%);
-  background-image: -webkit-linear-gradient(90deg, #c5281d 0%, #ff4b41 100%);
-  background-image: -ms-linear-gradient(90deg, #c5281d 0%, #ff4b41 100%);
+  background-color: #393939;
 }
+
 
 .bottom-text-container div {
   font-size: 1.1em;
-  padding: 0 1em;
+  padding: 0.1em 1em;
+  text-align: center;
+}
+
+.mobile-bottom-text-container {
   text-align: center;
 }
 
@@ -5252,6 +5255,10 @@ body.swal2-shown {
 
 .tp-widget-wrapper{
   margin: 0;
+}
+
+.carousel-control{
+  display: none;
 }
 
 
