@@ -947,7 +947,7 @@ header.image-home:before {
   position: relative;
   padding-top: 0px;
   overflow: hidden;
-  height: 1000px;
+  height: 900px;
 }
 .vertical:after {
   content: "";
