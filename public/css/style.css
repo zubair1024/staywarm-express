@@ -921,7 +921,8 @@ End Steps
   /* background-image: url(https://res.cloudinary.com/dibkwkkot/image/upload/v1537105153/Staywarm_banner_big_v8_without_background.png) right top; */
   /* background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537375584/Staywarm_banner_big_v9-smal.png") */
   /* background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537379196/Staywarm_banner_big_v11.png") */
-  background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537384639/Staywarm_banner_big_v13.png")
+  /* background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537384639/Staywarm_banner_big_v13.png") */
+  background: url("https://res.cloudinary.com/dibkwkkot/image/upload/v1537467601/Staywarm_banner_big_v13_2.png")
     no-repeat right top;
   background-color: #000;
   background-size: cover;
@@ -5119,15 +5120,17 @@ body.swal2-shown {
 }
 
 .bottom-text-container {
-  position: relative;
-  bottom: -27rem;
   text-align: center;
-  margin-bottom: 3rem;
   margin: auto;
+  padding: 3px 0;
+  background-image: -moz-linear-gradient(90deg, #c5281d 0%, #ff4b41 100%);
+  background-image: -webkit-linear-gradient(90deg, #c5281d 0%, #ff4b41 100%);
+  background-image: -ms-linear-gradient(90deg, #c5281d 0%, #ff4b41 100%);
 }
 
 .bottom-text-container div {
-  font-size: 2em;
+  font-size: 1.1em;
+  padding: 0 1em;
   text-align: center;
 }
 
@@ -5135,3 +5138,121 @@ body.swal2-shown {
   padding: 0;
   text-align: center;
 }
+
+.words{
+  text-align:center;
+}
+
+.words-1 span{
+	position: absolute;
+  opacity: 0;
+  left: 50%;
+  text-align: center;
+	overflow: hidden;
+	-webkit-animation: rotateWord 12s ease-in-out infinite 0s;
+	-ms-animation: rotateWord 12s ease-in-out infinite 0s;
+	animation: rotateWord 12s ease-in-out infinite 0s;
+}
+.words-1 span:nth-child(2) { 
+    -webkit-animation-delay: 3s; 
+	-ms-animation-delay: 3s; 
+	animation-delay: 3s;
+}
+.words-1 span:nth-child(3) { 
+    -webkit-animation-delay: 6s; 
+	-ms-animation-delay: 6s; 
+	animation-delay: 6s;
+}
+.words-1 span:nth-child(4) { 
+    -webkit-animation-delay: 9s; 
+	-ms-animation-delay: 9s; 
+	animation-delay: 9s;
+}
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+	5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+	20% { opacity: 0; -webkit-transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -ms-transform: translateY(-30px); }
+	5% { opacity: 1; -ms-transform: translateY(0px);}
+    17% { opacity: 1; -ms-transform: translateY(0px); }
+	20% { opacity: 0; -ms-transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+	5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+	20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/**/
+.animated-words {
+  display: inline-block;
+}
+.animated-words span:nth-child(2) { 
+  -webkit-animation-delay: 3s; 
+  -ms-animation-delay: 3s; 
+  animation-delay: 3s; 
+}
+.animated-words span:nth-child(3) { 
+  -webkit-animation-delay: 6s; 
+  -ms-animation-delay: 6s; 
+  animation-delay: 6s; 
+}
+.animated-words span:nth-child(4) { 
+  -webkit-animation-delay: 9s; 
+  -ms-animation-delay: 9s; 
+  animation-delay: 9s; 
+}
+.animated-words span:nth-child(5) { 
+  -webkit-animation-delay: 12s; 
+  -ms-animation-delay: 12s; 
+  animation-delay: 12s; 
+}
+.animated-words span:nth-child(6) { 
+  -webkit-animation-delay: 15s; 
+  -ms-animation-delay: 15s; 
+  animation-delay: 15s; 
+}
+
+
+.animated-words span {
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-animation: animateWord 18s linear infinite 0s;
+  -ms-animation: animateWord 18s linear infinite 0s;
+  animation: animateWord 18s linear infinite 0s;
+}
+
+@-webkit-keyframes animateWord {
+  0% { opacity: 0; }
+  2% { opacity: 0; -webkit-transform: translateY(-30px); }
+  5% { opacity: 1; -webkit-transform: translateY(0px);}
+  17% { opacity: 1; -webkit-transform: translateY(0px); }
+  20% { opacity: 0; -webkit-transform: translateY(30px); }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.trustpilot-container-box{
+  padding-top: 0px; margin-top:0px; float:left;left: -0.5em;top: -0.5em;
+}
+
+.tp-widget-wrapper{
+  margin: 0;
+}
+
+
+/**/
