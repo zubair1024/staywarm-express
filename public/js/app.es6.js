@@ -8,6 +8,9 @@ $(document).ready(function() {
         $(".collapse.navbar-collapse").removeClass("in");
       }
     },
+    openBlog: function() {
+      window.open("https://blog.247staywarm.co.uk", "_blank");
+    },
     init: function() {
       this.initListeners();
     },
@@ -29,20 +32,29 @@ $(document).ready(function() {
       });
     },
     submitContactForm: function() {
-      gtag("event", "contact_form_submitted", {
-        event_category: "Get A Quote",
-        event_label: "engagement"
-      });
-      let name = $("form-uname").val();
-      let email = $("form-uemail").val();
-      let message = $("form-message").val();
-      $.post("/contact", {
-        name: name,
-        email: email,
-        message: message
-      }).done(function(data) {
-        $("#contact-form-submit").prop("disabled", true);
-        alert("Thank you. We will get in touch with you shortly");
+      // gtag("event", "contact_form_submitted", {
+      //   event_category: "Get A Quote",
+      //   event_label: "engagement"
+      // });
+      let name = $("#form-uname").val();
+      let email = $("#form-uemail").val();
+      let message = $("#form-message").val();
+      $.ajax({
+        url: "/contact",
+        method: "POST",
+        data: {
+          name: name,
+          email: email,
+          message: message
+        },
+        dataType: "json",
+        success: function() {
+          $("#contact-form-submit").prop("disabled", true);
+          alert("Thank you. We will get in touch with you shortly");
+        },
+        failed: function() {
+          alert("There was an error. Please try again later");
+        }
       });
     },
     bannerQuote: function(size) {
